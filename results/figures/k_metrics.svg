@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720">
+<rect width="100%" height="100%" fill="white"/>
+<text x="500" y="32" text-anchor="middle" font-size="24" font-weight="700">K 值评价指标对比</text>
+<text x="265.0" y="55" text-anchor="middle" font-size="15" font-weight="600">Silhouette 越大越好</text>
+<rect x="60" y="70" width="410" height="230" fill="#f8fafc" stroke="#cbd5e1"/>
+<polyline points="88.0,92.0 124.2,188.8 160.4,221.2 196.6,204.5 232.8,246.1 269.0,238.8 305.2,231.9 341.4,256.8 377.6,245.8 413.8,269.7 450.0,272.0" fill="none" stroke="#2563eb" stroke-width="2.4"/>
+<circle cx="88.0" cy="92.0" r="4" fill="#2563eb"><title>K=2, silhouette_score=0.4376</title></circle>
+<circle cx="124.2" cy="188.8" r="4" fill="#2563eb"><title>K=3, silhouette_score=0.3283</title></circle>
+<circle cx="160.4" cy="221.2" r="4" fill="#2563eb"><title>K=4, silhouette_score=0.2916</title></circle>
+<circle cx="196.6" cy="204.5" r="4" fill="#2563eb"><title>K=5, silhouette_score=0.3105</title></circle>
+<circle cx="232.8" cy="246.1" r="4" fill="#2563eb"><title>K=6, silhouette_score=0.2634</title></circle>
+<circle cx="269.0" cy="238.8" r="4" fill="#2563eb"><title>K=7, silhouette_score=0.2717</title></circle>
+<circle cx="305.2" cy="231.9" r="4" fill="#2563eb"><title>K=8, silhouette_score=0.2795</title></circle>
+<circle cx="341.4" cy="256.8" r="4" fill="#2563eb"><title>K=9, silhouette_score=0.2513</title></circle>
+<circle cx="377.6" cy="245.8" r="4" fill="#2563eb"><title>K=10, silhouette_score=0.2637</title></circle>
+<circle cx="413.8" cy="269.7" r="4" fill="#2563eb"><title>K=11, silhouette_score=0.2368</title></circle>
+<circle cx="450.0" cy="272.0" r="4" fill="#2563eb"><title>K=12, silhouette_score=0.2342</title></circle>
+<text x="265.0" y="322" text-anchor="middle" font-size="12">K</text>
+<text x="745.0" y="55" text-anchor="middle" font-size="15" font-weight="600">Davies-Bouldin 越小越好</text>
+<rect x="540" y="70" width="410" height="230" fill="#f8fafc" stroke="#cbd5e1"/>
+<polyline points="568.0,248.8 604.2,272.0 640.4,159.7 676.6,265.1 712.8,190.0 749.0,92.0 785.2,250.3 821.4,252.8 857.6,206.6 893.8,208.1 930.0,164.1" fill="none" stroke="#2563eb" stroke-width="2.4"/>
+<circle cx="568.0" cy="248.8" r="4" fill="#2563eb"><title>K=2, davies_bouldin_index=1.0417</title></circle>
+<circle cx="604.2" cy="272.0" r="4" fill="#2563eb"><title>K=3, davies_bouldin_index=1.0206</title></circle>
+<circle cx="640.4" cy="159.7" r="4" fill="#2563eb"><title>K=4, davies_bouldin_index=1.1228</title></circle>
+<circle cx="676.6" cy="265.1" r="4" fill="#2563eb"><title>K=5, davies_bouldin_index=1.0268</title></circle>
+<circle cx="712.8" cy="190.0" r="4" fill="#2563eb"><title>K=6, davies_bouldin_index=1.0952</title></circle>
+<circle cx="749.0" cy="92.0" r="4" fill="#2563eb"><title>K=7, davies_bouldin_index=1.1844</title></circle>
+<circle cx="785.2" cy="250.3" r="4" fill="#2563eb"><title>K=8, davies_bouldin_index=1.0404</title></circle>
+<circle cx="821.4" cy="252.8" r="4" fill="#2563eb"><title>K=9, davies_bouldin_index=1.0381</title></circle>
+<circle cx="857.6" cy="206.6" r="4" fill="#2563eb"><title>K=10, davies_bouldin_index=1.0801</title></circle>
+<circle cx="893.8" cy="208.1" r="4" fill="#2563eb"><title>K=11, davies_bouldin_index=1.0787</title></circle>
+<circle cx="930.0" cy="164.1" r="4" fill="#2563eb"><title>K=12, davies_bouldin_index=1.1188</title></circle>
+<text x="745.0" y="322" text-anchor="middle" font-size="12">K</text>
+<text x="265.0" y="395" text-anchor="middle" font-size="15" font-weight="600">Calinski-Harabasz 越大越好</text>
+<rect x="60" y="410" width="410" height="230" fill="#f8fafc" stroke="#cbd5e1"/>
+<polyline points="88.0,466.3 124.2,432.0 160.4,493.0 196.6,474.9 232.8,510.9 269.0,544.7 305.2,536.2 341.4,553.8 377.6,573.5 413.8,588.8 450.0,612.0" fill="none" stroke="#2563eb" stroke-width="2.4"/>
+<circle cx="88.0" cy="466.3" r="4" fill="#2563eb"><title>K=2, calinski_harabasz_index=307.1605</title></circle>
+<circle cx="124.2" cy="432.0" r="4" fill="#2563eb"><title>K=3, calinski_harabasz_index=328.3147</title></circle>
+<circle cx="160.4" cy="493.0" r="4" fill="#2563eb"><title>K=4, calinski_harabasz_index=290.7400</title></circle>
+<circle cx="196.6" cy="474.9" r="4" fill="#2563eb"><title>K=5, calinski_harabasz_index=301.8608</title></circle>
+<circle cx="232.8" cy="510.9" r="4" fill="#2563eb"><title>K=6, calinski_harabasz_index=279.7037</title></circle>
+<circle cx="269.0" cy="544.7" r="4" fill="#2563eb"><title>K=7, calinski_harabasz_index=258.9069</title></circle>
+<circle cx="305.2" cy="536.2" r="4" fill="#2563eb"><title>K=8, calinski_harabasz_index=264.0986</title></circle>
+<circle cx="341.4" cy="553.8" r="4" fill="#2563eb"><title>K=9, calinski_harabasz_index=253.2838</title></circle>
+<circle cx="377.6" cy="573.5" r="4" fill="#2563eb"><title>K=10, calinski_harabasz_index=241.1562</title></circle>
+<circle cx="413.8" cy="588.8" r="4" fill="#2563eb"><title>K=11, calinski_harabasz_index=231.7069</title></circle>
+<circle cx="450.0" cy="612.0" r="4" fill="#2563eb"><title>K=12, calinski_harabasz_index=217.4180</title></circle>
+<text x="265.0" y="662" text-anchor="middle" font-size="12">K</text>
+<text x="745.0" y="395" text-anchor="middle" font-size="15" font-weight="600">SSE/Inertia 肘部法</text>
+<rect x="540" y="410" width="410" height="230" fill="#f8fafc" stroke="#cbd5e1"/>
+<polyline points="568.0,432.0 604.2,507.2 640.4,534.6 676.6,563.4 712.8,575.3 749.0,583.4 785.2,595.7 821.4,601.7 857.6,606.1 893.8,610.1 930.0,612.0" fill="none" stroke="#2563eb" stroke-width="2.4"/>
+<circle cx="568.0" cy="432.0" r="4" fill="#2563eb"><title>K=2, sse_inertia=1234.5464</title></circle>
+<circle cx="604.2" cy="507.2" r="4" fill="#2563eb"><title>K=3, sse_inertia=859.9053</title></circle>
+<circle cx="640.4" cy="534.6" r="4" fill="#2563eb"><title>K=4, sse_inertia=723.5795</title></circle>
+<circle cx="676.6" cy="563.4" r="4" fill="#2563eb"><title>K=5, sse_inertia=580.3541</title></circle>
+<circle cx="712.8" cy="575.3" r="4" fill="#2563eb"><title>K=6, sse_inertia=521.0116</title></circle>
+<circle cx="749.0" cy="583.4" r="4" fill="#2563eb"><title>K=7, sse_inertia=480.8484</title></circle>
+<circle cx="785.2" cy="595.7" r="4" fill="#2563eb"><title>K=8, sse_inertia=419.5481</title></circle>
+<circle cx="821.4" cy="601.7" r="4" fill="#2563eb"><title>K=9, sse_inertia=389.3248</title></circle>
+<circle cx="857.6" cy="606.1" r="4" fill="#2563eb"><title>K=10, sse_inertia=367.6281</title></circle>
+<circle cx="893.8" cy="610.1" r="4" fill="#2563eb"><title>K=11, sse_inertia=347.8332</title></circle>
+<circle cx="930.0" cy="612.0" r="4" fill="#2563eb"><title>K=12, sse_inertia=338.2584</title></circle>
+<text x="745.0" y="662" text-anchor="middle" font-size="12">K</text>
+</svg>

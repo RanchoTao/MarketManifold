@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="720" viewBox="0 0 1150 720">
+<rect width="100%" height="100%" fill="white"/>
+<text x="575" y="34" text-anchor="middle" font-size="24" font-weight="700">各聚类核心特征均值对比</text>
+<rect x="90" y="70" width="990" height="470" fill="#f8fafc" stroke="#cbd5e1"/>
+<line x1="90" y1="350.3" x2="1080" y2="350.3" stroke="#64748b"/>
+<rect x="110.6" y="237.3" width="17.5" height="113.0" fill="#2563eb"><title>低波动稳健型 收益 0.2641</title></rect>
+<rect x="131.2" y="279.2" width="17.5" height="71.1" fill="#dc2626"><title>低波动稳健型 波动 0.1662</title></rect>
+<rect x="151.9" y="303.6" width="17.5" height="46.8" fill="#16a34a"><title>低波动稳健型 动量 0.1092</title></rect>
+<rect x="172.5" y="350.3" width="17.5" height="41.9" fill="#9333ea"><title>低波动稳健型 回撤 -0.0978</title></rect>
+<text x="151.9" y="564" text-anchor="middle" font-size="10" transform="rotate(24 151.9,564)">0:低波动稳健型</text>
+<rect x="234.4" y="342.6" width="17.5" height="7.7" fill="#2563eb"><title>低波动承压型 收益 0.0181</title></rect>
+<rect x="255.0" y="281.9" width="17.5" height="68.4" fill="#dc2626"><title>低波动承压型 波动 0.1598</title></rect>
+<rect x="275.6" y="350.3" width="17.5" height="14.8" fill="#16a34a"><title>低波动承压型 动量 -0.0346</title></rect>
+<rect x="296.2" y="350.3" width="17.5" height="65.8" fill="#9333ea"><title>低波动承压型 回撤 -0.1538</title></rect>
+<text x="275.6" y="564" text-anchor="middle" font-size="10" transform="rotate(24 275.6,564)">1:低波动承压型</text>
+<rect x="358.1" y="266.5" width="17.5" height="83.9" fill="#2563eb"><title>均衡核心型 收益 0.1959</title></rect>
+<rect x="378.8" y="249.0" width="17.5" height="101.4" fill="#dc2626"><title>均衡核心型 波动 0.2368</title></rect>
+<rect x="399.4" y="287.9" width="17.5" height="62.4" fill="#16a34a"><title>均衡核心型 动量 0.1457</title></rect>
+<rect x="420.0" y="350.3" width="17.5" height="73.8" fill="#9333ea"><title>均衡核心型 回撤 -0.1725</title></rect>
+<text x="399.4" y="564" text-anchor="middle" font-size="10" transform="rotate(24 399.4,564)">2:均衡核心型</text>
+<rect x="481.9" y="350.3" width="17.5" height="10.7" fill="#2563eb"><title>高波动修复型 收益 -0.0250</title></rect>
+<rect x="502.5" y="208.6" width="17.5" height="141.7" fill="#dc2626"><title>高波动修复型 波动 0.3310</title></rect>
+<rect x="523.1" y="244.2" width="17.5" height="106.1" fill="#16a34a"><title>高波动修复型 动量 0.2479</title></rect>
+<rect x="543.8" y="350.3" width="17.5" height="142.2" fill="#9333ea"><title>高波动修复型 回撤 -0.3322</title></rect>
+<text x="523.1" y="564" text-anchor="middle" font-size="10" transform="rotate(24 523.1,564)">3:高波动修复型</text>
+<rect x="605.6" y="70.0" width="17.5" height="280.3" fill="#2563eb"><title>高收益高波动动量型 收益 0.6549</title></rect>
+<rect x="626.2" y="199.5" width="17.5" height="150.9" fill="#dc2626"><title>高收益高波动动量型 波动 0.3524</title></rect>
+<rect x="646.9" y="215.6" width="17.5" height="134.7" fill="#16a34a"><title>高收益高波动动量型 动量 0.3147</title></rect>
+<rect x="667.5" y="350.3" width="17.5" height="77.2" fill="#9333ea"><title>高收益高波动动量型 回撤 -0.1803</title></rect>
+<text x="646.9" y="564" text-anchor="middle" font-size="10" transform="rotate(24 646.9,564)">4:高收益高波动动量型</text>
+<rect x="729.4" y="350.3" width="17.5" height="124.9" fill="#2563eb"><title>高风险下行型 收益 -0.2918</title></rect>
+<rect x="750.0" y="187.6" width="17.5" height="162.7" fill="#dc2626"><title>高风险下行型 波动 0.3802</title></rect>
+<rect x="770.6" y="350.3" width="17.5" height="76.4" fill="#16a34a"><title>高风险下行型 动量 -0.1785</title></rect>
+<rect x="791.2" y="350.3" width="17.5" height="189.7" fill="#9333ea"><title>高风险下行型 回撤 -0.4432</title></rect>
+<text x="770.6" y="564" text-anchor="middle" font-size="10" transform="rotate(24 770.6,564)">5:高风险下行型</text>
+<rect x="853.1" y="350.3" width="17.5" height="36.0" fill="#2563eb"><title>弱动量承压型 收益 -0.0842</title></rect>
+<rect x="873.8" y="251.5" width="17.5" height="98.8" fill="#dc2626"><title>弱动量承压型 波动 0.2308</title></rect>
+<rect x="894.4" y="350.3" width="17.5" height="33.5" fill="#16a34a"><title>弱动量承压型 动量 -0.0783</title></rect>
+<rect x="915.0" y="350.3" width="17.5" height="102.7" fill="#9333ea"><title>弱动量承压型 回撤 -0.2399</title></rect>
+<text x="894.4" y="564" text-anchor="middle" font-size="10" transform="rotate(24 894.4,564)">6:弱动量承压型</text>
+<rect x="976.9" y="134.8" width="17.5" height="215.5" fill="#2563eb"><title>高收益稳健动量型 收益 0.5035</title></rect>
+<rect x="997.5" y="266.1" width="17.5" height="84.2" fill="#dc2626"><title>高收益稳健动量型 波动 0.1966</title></rect>
+<rect x="1018.1" y="230.4" width="17.5" height="120.0" fill="#16a34a"><title>高收益稳健动量型 动量 0.2803</title></rect>
+<rect x="1038.8" y="350.3" width="17.5" height="46.7" fill="#9333ea"><title>高收益稳健动量型 回撤 -0.1092</title></rect>
+<text x="1018.1" y="564" text-anchor="middle" font-size="10" transform="rotate(24 1018.1,564)">7:高收益稳健动量型</text>
+<rect x="90" y="660" width="14" height="14" fill="#2563eb"/><text x="110" y="672" font-size="13">收益</text>
+<rect x="200" y="660" width="14" height="14" fill="#dc2626"/><text x="220" y="672" font-size="13">波动</text>
+<rect x="310" y="660" width="14" height="14" fill="#16a34a"/><text x="330" y="672" font-size="13">动量</text>
+<rect x="420" y="660" width="14" height="14" fill="#9333ea"/><text x="440" y="672" font-size="13">回撤</text>
+</svg>
