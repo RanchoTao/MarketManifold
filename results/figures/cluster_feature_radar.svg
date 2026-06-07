@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="350" y="36" text-anchor="middle" font-size="22" font-weight="700">聚类画像雷达图（展示版）</text>
+<line x1="350" y1="270" x2="520.0" y2="270.0" stroke="#cbd5e1"/><text x="520.0" y="270.0" font-size="13">收益</text>
+<line x1="350" y1="270" x2="350.0" y2="440.0" stroke="#cbd5e1"/><text x="350.0" y="440.0" font-size="13">波动</text>
+<line x1="350" y1="270" x2="180.0" y2="270.0" stroke="#cbd5e1"/><text x="180.0" y="270.0" font-size="13">动量</text>
+<line x1="350" y1="270" x2="350.0" y2="100.0" stroke="#cbd5e1"/><text x="350.0" y="100.0" font-size="13">回撤</text>
+<circle cx="350" cy="270" r="56.1" fill="none" stroke="#e2e8f0"/>
+<circle cx="350" cy="270" r="112.2" fill="none" stroke="#e2e8f0"/>
+<circle cx="350" cy="270" r="170.0" fill="none" stroke="#e2e8f0"/>
+<polygon points="464.3,270.0 350.0,308.9 236.2,270.0 350.0,100.0" fill="#2563eb" opacity="0.08" stroke="#2563eb" stroke-width="1.6"><title>低波动稳健型</title></polygon>
+<polygon points="429.2,270.0 350.0,305.0 275.6,270.0 350.0,121.9" fill="#dc2626" opacity="0.08" stroke="#dc2626" stroke-width="1.6"><title>低波动承压型</title></polygon>
+<polygon points="454.5,270.0 350.0,352.2 226.3,270.0 350.0,129.2" fill="#16a34a" opacity="0.08" stroke="#16a34a" stroke-width="1.6"><title>均衡核心型</title></polygon>
+<polygon points="423.0,270.0 350.0,409.9 198.3,270.0 350.0,191.6" fill="#9333ea" opacity="0.08" stroke="#9333ea" stroke-width="1.6"><title>高波动修复型</title></polygon>
+<polygon points="520.0,270.0 350.0,423.0 180.0,270.0 350.0,132.2" fill="#ea580c" opacity="0.08" stroke="#ea580c" stroke-width="1.6"><title>高收益高波动动量型</title></polygon>
+<polygon points="385.0,270.0 350.0,440.0 315.0,270.0 350.0,235.0" fill="#0891b2" opacity="0.08" stroke="#0891b2" stroke-width="1.6"><title>高风险下行型</title></polygon>
+<polygon points="414.6,270.0 350.0,348.5 287.6,270.0 350.0,155.5" fill="#be123c" opacity="0.08" stroke="#be123c" stroke-width="1.6"><title>弱动量承压型</title></polygon>
+<polygon points="498.4,270.0 350.0,327.5 189.4,270.0 350.0,104.4" fill="#4f46e5" opacity="0.08" stroke="#4f46e5" stroke-width="1.6"><title>高收益稳健动量型</title></polygon>
+</svg>

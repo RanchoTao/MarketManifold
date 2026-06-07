@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# 不提交大型原始数据；README 说明文件保留。
+data/raw/*
+!data/raw/README.md
