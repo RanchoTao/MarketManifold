@@ -1,9 +1,19 @@
-# data/raw
+# Raw data
 
-该目录预留给原始数据文件，例如标普500成分股列表和日频价格数据。为避免仓库体积过大，当前不提交大型原始数据。
+`src/dynamic_market_regime.py` expects an optional raw price panel at:
 
-建议后续补充：
+```text
+data/raw/sp500_prices.csv
+```
 
-- `sp500_constituents.csv`：成分股列表、行业、市值等信息；
-- `sp500_prices_YYYYMMDD_YYYYMMDD.csv`：原始日频价格；
-- `data_source_note.md`：数据来源、下载日期、许可说明和时间范围。
+Required columns:
+
+```text
+date,ticker,sector,close
+```
+
+If this file is absent, the script creates a deterministic S&P-500-like panel for 2020-01-01 to 2025-06-30 so the full project remains reproducible without external API keys. To use real data, replace `sp500_prices.csv` with adjusted close prices and rerun:
+
+```bash
+python src/dynamic_market_regime.py
+```
