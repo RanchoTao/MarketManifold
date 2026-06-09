@@ -1,289 +1,177 @@
-# 标普500市场结构聚类与可视化
+# 基于动态网络与聚类分析的标普500市场结构演化研究
 
-本仓库用于数据挖掘课程项目，主题是**基于市场表现特征的标普500资产聚类与可视化解释**。项目已经包含 React + Vite 前端看板和一套可复现实验脚本，可从本地 CSV 特征数据生成聚类评价指标、二维散点图、核心特征对比图和可解释聚类画像，用于最终现场展示与答辩。
+本仓库已从“股票特征 + KMeans 聚类 Demo”重构为一个完整的数据挖掘研究项目：研究标普500市场结构如何形成、如何随时间演化，以及重大事件附近是否出现结构突变。聚类对象不再是单只股票，而是按滚动窗口生成的**市场快照（market snapshots）**。
 
-## 1. 项目背景与研究动机
+## 1. 研究问题
 
-标普500指数覆盖美国大型上市公司，是观察市场结构、资产风格和风险暴露的重要样本池。单只股票的收益率或价格走势只能提供局部信息，而数据挖掘课程项目更关注如何从多维特征中发现结构化模式。因此，本项目将股票视为待聚类对象，基于收益、风险、动量和回撤等市场表现特征，回答以下问题：
+1. **市场是否存在不同结构状态（Market Regime）？**  
+   通过滚动窗口提取市场级收益、风险、横截面、相关性、网络与行业结构特征，并用无监督聚类发现状态。
+2. **市场结构如何随时间变化？**  
+   将每个窗口映射到一个状态，生成 2020 至 2025 年的状态时间轴与状态转移表。
+3. **重大事件是否导致市场结构突变？**  
+   自动检查 COVID 冲击、美联储加息周期、AI 行情等事件附近的状态切换。
+4. **能否利用聚类方法自动发现市场状态？**  
+   比较 KMeans、Agglomerative Clustering、Gaussian Mixture 三类方法，并用 Silhouette、Davies-Bouldin、Calinski-Harabasz 指标选择模型。
 
-- 标普500成分股是否可以被划分为若干具有解释意义的市场结构类别？
-- 不同类别在收益、波动、动量和回撤上的差异是否清晰？
-- 聚类结果如何转化为可展示、可解释、可应用的资产画像？
-- 前端交互式可视化如何辅助老师和同学理解聚类结果？
+## 2. 方法依据与成熟做法
 
-项目不提供投资建议，而是以数据挖掘方法展示“特征构造—聚类建模—评价指标—结果解释—前端展示”的完整流程。
+项目方法参考了金融网络与市场状态识别领域的成熟实践：
 
-## 2. 当前仓库结构审查结论
+- 金融资产收益的动态相关网络常通过**滚动窗口相关矩阵**刻画市场层面的联动关系，相关结构在危机期间通常会增强。参考：Dynamic correlation network analysis of financial asset returns with network clustering, PLOS ONE / PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC6214240/
+- 相关网络、MST/阈值网络和网络聚类可用于描述金融市场拓扑与行业结构，危机阶段往往表现为更强的共同运动与更高的网络连接度。参考：Dynamics of Market Correlations: Taxonomy and Portfolio Analysis: https://arxiv.org/abs/1011.3225
+- 动态金融网络研究强调在连续时间窗口中跟踪拓扑指标、社区结构和市场状态变化。参考：Modular Dynamics of Financial Market Networks: https://arxiv.org/abs/1501.05040
+- 多因子金融网络聚类说明行业、国家/风格等多重因素会共同塑造资产间相关结构。参考：Dynamic Multi-Factor Clustering of Financial Networks: https://arxiv.org/abs/1505.01550
 
-当前仓库原本主要是一个静态前端项目，使用 `public/sp500_features.csv` 在浏览器端绘制市场结构图，前端已经具备搜索股票、选择 K 值、圆环态与结构态切换、同类资产连线和特征表等展示能力。为回应老师反馈，本次补充了可复现的实验脚本、指标输出、聚类画像、答辩提纲、团队计划和运行说明。
+## 3. 数据层设计
 
-```text
-.
-├── README.md                         # 项目总说明与复现实验指南
-├── sp500_features.csv                # 仓库内小规模聚合特征数据，供实验脚本读取
-├── public/sp500_features.csv         # 前端部署读取的数据副本
-├── src/                              # React 前端源码，同时包含聚类实验脚本
-│   ├── market_clustering.py          # 标准库实现的 KMeans、评价指标、画像和 SVG 输出
-│   ├── App.jsx
-│   ├── pages/DashboardPage.jsx
-│   └── components/
-├── notebooks/sp500_clustering_analysis.ipynb
-├── results/
-│   ├── metrics.csv                   # 不同 K 值评价指标
-│   ├── cluster_profiles.md           # 聚类画像解释文档
-│   ├── cluster_profile_summary.csv   # 聚类画像汇总表
-│   ├── cluster_assignments.csv       # 每只股票所属聚类
-│   └── figures/                      # 展示图表 SVG
-├── docs/presentation_outline.md      # 现场答辩逐页提纲
-├── docs/team_plan.md                 # 分工、时间规划与风险应对
-├── data/raw/                         # 预留原始数据目录，不提交大型原始数据
-├── data/processed/                   # 预留处理后数据目录
-├── requirements.txt                  # Python 实验扩展依赖
-└── package.json                      # 前端依赖与脚本
-```
-
-## 3. 数据来源与数据范围
-
-### 3.1 数据集来源
-
-- 当前可运行数据：仓库根目录的 `sp500_features.csv` 和前端目录的 `public/sp500_features.csv`。
-- 样本对象：标普500股票代码级别资产。
-- 当前样本规模：500 条股票样本，每条样本代表一只股票的聚合市场表现特征。
-- 当前数据形态：已经计算好的聚合特征表，不包含原始日频价格序列。
-- 需要人工补充的关键信息：原始价格数据的真实来源、采集日期和精确回看窗口。建议后续明确为 Yahoo Finance、Kaggle、Stooq、NASDAQ Data Link 或课程允许的数据源之一，并保留数据下载脚本或数据字典。
-
-### 3.2 时间范围
-
-当前字段命名显示特征为：
-
-- `return_1y`：近 1 年收益率；
-- `volatility_1y`：近 1 年波动率；
-- `momentum_6m`：近 6 个月动量；
-- `max_drawdown_1y`：近 1 年最大回撤。
-
-由于仓库没有保存原始抓取脚本和抓取日期，当前只能说明为“以原始特征文件生成时点为截止日的 1 年/6 个月回看窗口”。答辩前应补充精确日期，例如“2023-01-01 至 2023-12-31”或“截至 2024-xx-xx 的过去 252 个交易日”。
-
-### 3.3 样本筛选规则
-
-当前实验脚本采用以下筛选与清洗规则：
-
-1. 读取 `ticker` 和五个数值字段；
-2. 股票代码去除首尾空格并统一大写；
-3. 删除 `ticker` 为空的样本；
-4. 删除关键数值字段缺失、非数值或无穷值的样本；
-5. 按 `ticker` 去重，保留首次出现记录；
-6. 对所有数值字段进行 1% 和 99% 分位数温和截尾，降低极端值对 KMeans 的影响；
-7. 聚类建模只使用四个市场表现特征，不直接使用最新价格，避免价格量纲主导距离计算。
-
-### 3.4 字段说明
-
-| 字段 | 含义 | 用途 |
-| --- | --- | --- |
-| `ticker` | 股票代码 | 样本唯一标识、前端搜索和标签展示 |
-| `latest_price` | 最近价格 | 辅助展示，不进入当前 KMeans 距离计算 |
-| `return_1y` | 近 1 年收益率 | 收益表现特征 |
-| `volatility_1y` | 近 1 年收益率波动率 | 风险强度特征 |
-| `momentum_6m` | 近 6 个月价格动量 | 趋势延续或反转特征 |
-| `max_drawdown_1y` | 近 1 年最大回撤 | 下行风险与稳定性特征 |
-
-### 3.5 `data/` 目录预期结构
-
-为避免提交大型原始数据，当前仓库只保留小型特征 CSV。后续如果补充完整数据流水线，建议使用以下结构：
+默认流程优先读取：
 
 ```text
-data/
-├── raw/
-│   ├── sp500_prices_YYYYMMDD_YYYYMMDD.csv      # 原始日频价格，不建议提交大文件
-│   ├── sp500_constituents.csv                  # 成分股列表
-│   └── data_source_note.md                     # 数据来源、下载日期、许可说明
-└── processed/
-    ├── sp500_features.csv                      # 清洗后特征表
-    └── feature_quality_report.csv              # 缺失值、重复值、异常值报告
+data/raw/sp500_prices.csv
 ```
 
-## 4. 数据清洗流程
+字段要求：
 
-- **缺失值处理**：关键字段缺失时删除样本；如后续引入行业、市值等辅助字段，可采用行业中位数填充或单独标记“未知”。
-- **异常值处理**：对价格、收益、波动率、动量和回撤进行 1%/99% 分位数截尾，保留样本但限制极端值影响。
-- **重复值处理**：按 `ticker` 去重，保留第一次出现记录。
-- **类型规范**：股票代码统一大写，数值字段强制转换为浮点数。
-- **路径规范**：脚本默认使用相对路径 `sp500_features.csv` 输入，结果统一写入 `results/`。
-
-## 5. 特征工程方案
-
-本项目是资产聚类，不是用户行为聚类或文本聚类，因此特征工程围绕市场行为展开。但在答辩中可以类比用户聚类中的“行为强度、偏好分布、时间活跃、稳定性/多样性”等思想。
-
-### 5.1 当前已实现特征
-
-- **收益强度特征**：`return_1y` 衡量过去一年整体上涨或下跌幅度。
-- **风险强度特征**：`volatility_1y` 衡量收益波动强弱。
-- **时间趋势特征**：`momentum_6m` 衡量中期趋势，反映近期活跃方向。
-- **稳定性/回撤特征**：`max_drawdown_1y` 衡量最严重下行风险，越接近 0 表示回撤越小。
-- **标准化处理**：对四个聚类特征进行 Z-score 标准化，使 KMeans 的欧式距离不被量纲影响。
-- **降维可视化**：脚本输出 PCA 二维坐标，用于二维聚类散点图；前端同时提供收益率—波动率平面展示。
-
-### 5.2 后续可增强特征
-
-- **行为强度扩展**：成交量均值、换手率、成交额、波动率分位数。
-- **偏好/结构分布扩展**：行业、板块、市值分层、成长/价值风格暴露。
-- **时间活跃扩展**：月度收益序列、季度动量、短期反转、财报窗口波动。
-- **稳定性/多样性扩展**：滚动波动率稳定性、Beta、下行波动率、VaR、行业内相对排名。
-- **文本/评论扩展**：如果后续加入新闻或评论，可增加文本清洗、分词、TF-IDF/Embedding、主题关键词、文本长度和情感倾向等辅助特征。
-
-## 6. 聚类算法选择
-
-当前实现选择 KMeans 作为主算法，原因如下：
-
-- 特征均为连续数值，适合欧式距离建模；
-- KMeans 计算速度快，适合 500 条样本的现场演示和前端交互；
-- 聚类中心可解释为某类资产的平均市场画像；
-- 可通过不同 K 值评价指标和肘部法进行模型选择说明。
-
-局限是 KMeans 偏好近似球形簇，对异常值、非凸结构和不同密度簇敏感。因此后续可对比层次聚类、Gaussian Mixture Model、DBSCAN 或谱聚类。
-
-## 7. 聚类效果评价方法
-
-实验脚本 `src/market_clustering.py` 已输出 `results/metrics.csv`，包含 K=2 到 K=12 的对比结果：
-
-- **Silhouette Score**：轮廓系数，越大越好，衡量样本更接近本簇还是其他簇；
-- **Davies-Bouldin Index**：簇内离散和簇间距离的综合指标，越小越好；
-- **Calinski-Harabasz Index**：簇间离散与簇内离散比值，越大越好；
-- **SSE/Inertia**：簇内平方误差和，用于肘部法，越小表示拟合越紧，但 K 越大自然越小。
-
-当前前端默认展示 K=8，是为了在 500 只股票上获得更细粒度、可讲述的资产画像。答辩时应说明：指标最优 K 与展示 K 未必完全一致，最终 K 需要综合指标、画像可读性和业务解释性。
-
-## 8. 实验流程
-
-1. 读取 `sp500_features.csv`；
-2. 清洗缺失、重复和异常值；
-3. 选择 `return_1y`、`volatility_1y`、`momentum_6m`、`max_drawdown_1y` 作为聚类特征；
-4. 对特征进行 Z-score 标准化；
-5. 对 K=2 到 K=12 分别运行 KMeans；
-6. 计算 Silhouette、Davies-Bouldin、Calinski-Harabasz 和 SSE；
-7. 使用 K=8 生成最终聚类标签；
-8. 生成聚类画像表、PCA 坐标和 SVG 图；
-9. 前端读取 `public/sp500_features.csv` 展示市场结构；
-10. 答辩时结合 `results/cluster_profiles.md` 解释各类资产画像。
-
-## 9. 结果解释方式
-
-结果不只停留在 Cluster 0、Cluster 1，而是根据每个簇的均值特征命名为可解释画像，例如：
-
-- 低波动稳健型；
-- 低波动承压型；
-- 均衡核心型；
-- 高波动修复型；
-- 高收益高波动动量型；
-- 高风险下行型；
-- 弱动量承压型；
-- 高收益稳健动量型。
-
-完整解释见 `results/cluster_profiles.md`。其中每类均包含样本数量、核心特征、典型资产、行为偏好和应用价值。
-
-## 10. 可视化输出
-
-运行实验脚本后会生成以下展示材料：
-
-- `results/figures/k_metrics.svg`：不同 K 值评价指标对比图；
-- `results/figures/pca_cluster_scatter.svg`：PCA 二维聚类散点图；
-- `results/figures/cluster_feature_bar.svg`：各聚类核心特征柱状图；
-- `results/figures/cluster_feature_radar.svg`：各聚类核心特征雷达图；
-- `results/cluster_profile_summary.csv`：聚类画像汇总表；
-- `results/cluster_assignments.csv`：股票—聚类标签明细表。
-
-## 11. 项目分工
-
-当前仓库未提供真实成员姓名，因此暂用占位分工，答辩前需要替换为真实姓名：
-
-| 成员 | 负责模块 | 主要交付物 |
-| --- | --- | --- |
-| 成员A | 数据获取、清洗、字段说明 | 数据来源说明、清洗规则、特征表 |
-| 成员B | 特征工程、聚类实验、评价指标 | `metrics.csv`、聚类脚本、实验结论 |
-| 成员C | 前端展示、结果解释、答辩材料 | React 看板、画像解释、PPT 提纲 |
-
-详细计划见 `docs/team_plan.md`。
-
-## 12. 时间规划
-
-| 阶段 | 时间节点 | 任务 | 交付物 |
-| --- | --- | --- | --- |
-| 第1阶段 | 第1周 | 固定数据范围与字段口径 | 数据说明、原始数据记录 |
-| 第2阶段 | 第2周 | 完成清洗和特征工程 | 特征 CSV、质量报告 |
-| 第3阶段 | 第3周 | 聚类建模和 K 值对比 | `results/metrics.csv`、评价图 |
-| 第4阶段 | 第4周 | 聚类画像解释和前端联调 | `cluster_profiles.md`、前端看板 |
-| 第5阶段 | 答辩前 | 演示脚本和 Q&A 准备 | PPT、讲稿、备份结果 |
-
-## 13. 现场展示方案
-
-现场展示建议按以下路径进行：
-
-1. 用 1 页说明研究背景：为什么要做资产市场结构聚类；
-2. 展示数据字段和样本范围；
-3. 展示清洗与特征工程流程图；
-4. 展示 K 值评价指标对比图；
-5. 打开前端看板，从圆环态切换到市场结构态；
-6. 搜索典型股票，例如 AAPL、AMZN、AMD、MU，解释其所属类别；
-7. 展示 PCA 散点图和核心特征柱状图；
-8. 展示 `cluster_profiles.md` 中的画像命名和应用价值；
-9. 主动说明局限：缺少原始价格数据、行业信息和精确采集日期；
-10. 给出后续改进方向：更多特征、更多算法、稳定性检验。
-
-详细逐页提纲见 `docs/presentation_outline.md`。
-
-## 14. 如何运行项目
-
-### 14.1 运行聚类实验并生成结果
-
-本脚本只依赖 Python 标准库，因此即使无法安装第三方包也能运行：
-
-```bash
-python src/market_clustering.py
+```text
+date,ticker,sector,close
 ```
 
-可选参数：
+如果没有真实价格面板，脚本会自动生成一个可复现实验面板 `data/raw/sp500_prices.csv`，覆盖 2020-01-01 至 2025-06-30 的工作日，并内置以下市场事件：
+
+- COVID shock：2020-02-20 至 2020-04-30
+- Policy/liquidity rebound：2020-05-01 至 2021-12-31
+- Fed tightening cycle：2022-01-01 至 2022-12-31
+- AI-led growth rally：2023-01-01 至 2024-12-31
+- Late-cycle normalization：2025-01-01 至 2025-06-30
+
+> 说明：当前仓库没有外部 API 凭据，且执行环境网络包安装受限。因此代码采用“真实数据优先、可复现模拟数据兜底”的工程策略，保证 Notebook、脚本和结果文件均可运行复现。替换为真实数据时，只需按字段格式放入 `data/raw/sp500_prices.csv` 后重新运行脚本。
+
+## 4. 滚动窗口市场快照
+
+- 时间范围：默认 2020-01-01 至 2025-06-30；可通过命令行参数调整。
+- 窗口长度：60 个交易日。
+- 步长：20 个交易日。
+- 样本单位：每个滚动窗口是一条市场状态样本。
+- 输出：`data/processed/market_snapshots.csv`。
+
+运行命令：
 
 ```bash
-python src/market_clustering.py --input sp500_features.csv --results-dir results --final-k 8 --k-min 2 --k-max 12
+python src/dynamic_market_regime.py --start 2020-01-01 --end 2025-06-30 --window 60 --step 20
 ```
 
-### 14.2 运行 Notebook
+## 5. 市场状态特征工程
 
-```bash
-jupyter notebook notebooks/sp500_clustering_analysis.ipynb
+每个窗口提取以下市场级特征：
+
+| 维度 | 特征 |
+| --- | --- |
+| 收益率 | 平均窗口收益、中位窗口收益、收益率标准差 |
+| 风险 | 年化市场波动率、最大回撤 |
+| 横截面 | 平均日度收益离散度、个股波动率离散度 |
+| 相关性结构 | 平均相关系数、相关系数标准差 |
+| 网络结构 | 平均度数、网络密度、聚类系数 |
+| 行业结构 | 行业集中度、行业收益标准差、行业收益差、科技相对市场收益 |
+
+这些特征将市场看成一个随时间变化的系统，而不是把股票静态分类。
+
+## 6. 市场状态发现
+
+脚本比较三类聚类方法：
+
+- `kmeans`
+- `agglomerative`
+- `gaussian_mixture`（标准库环境下实现为对角协方差 GMM 风格 EM 近似）
+
+评价指标：
+
+- Silhouette Score：越大越好。
+- Davies-Bouldin Index：越小越好。
+- Calinski-Harabasz Index：越大越好。
+
+模型选择表保存到：
+
+```text
+results/metrics/clustering_model_selection.csv
 ```
 
-Notebook 中调用同一套 `src/market_clustering.py` 流程，保证与命令行结果一致。
+## 7. 市场状态解释
 
-### 14.3 安装 Python 扩展依赖
+脚本不会只输出 Cluster 编号，而是根据收益、风险、相关性、网络与行业特征自动命名状态，例如：
 
-`requirements.txt` 提供了后续扩展实验可用的 pandas、scikit-learn、matplotlib 和 jupyter 依赖：
+- Regime A：危机共振状态
+- Regime B：低波动牛市
+- Regime C：高波动调整期
+- Regime D：科技成长驱动阶段
 
-```bash
-python -m pip install -r requirements.txt
+完整解释保存到：
+
+```text
+results/regime_profiles.md
 ```
 
-如果课程机房无法联网，可跳过安装，直接运行标准库脚本。
+## 8. 动态演化分析
 
-### 14.4 运行前端展示
+核心输出：
 
-```bash
-npm install
-npm run dev
+- `results/regime_assignments.csv`：每个窗口所属市场状态。
+- `results/regime_transition.csv`：相邻窗口状态转移。
+- `results/event_change_analysis.md`：COVID、加息周期、AI 行情等事件附近的结构变化检查。
+- `results/figures/regime_timeline.svg`：市场状态时间轴。
+- `results/figures/regime_transition_graph.svg`：状态转移图。
+
+## 9. 可视化输出
+
+所有新增可视化统一保存到 `results/figures/`，并使用可审阅的纯文本 SVG，避免在 PR 中继续提交新的二进制图片：
+
+1. `pca_market_state_scatter.svg`：PCA 市场状态散点图。
+2. `tsne_market_state_scatter.svg`：t-SNE 风格市场状态散点图（标准库可复现近邻布局）。
+3. `regime_timeline.svg`：市场状态时间轴。
+4. `regime_transition_graph.svg`：状态转移图。
+5. `network_structure_latest.svg`：最新窗口相关网络结构图。
+6. `key_period_structure_comparison.svg`：关键状态结构对比图。
+
+## 10. Notebook 与现场展示
+
+- Notebook：`notebooks/sp500_clustering_analysis.ipynb`，可直接运行并调用主脚本生成结果。
+- 答辩提纲：`docs/presentation_outline.md`，不少于 10 页，覆盖研究背景、问题、数据、特征、网络、聚类、指标、状态发现、动态演化、应用价值、局限与未来工作。
+- 前端看板仍保留原股票特征 Demo，可作为“原始项目对比/资产层辅助视图”；本次研究主线以 `src/dynamic_market_regime.py` 和 `results/` 产物为准。
+
+## 11. 目录结构
+
+```text
+src/dynamic_market_regime.py          # 动态市场状态挖掘主脚本
+data/raw/sp500_prices.csv             # 真实数据优先；缺失时自动生成的价格面板
+data/processed/market_snapshots.csv   # 60日窗口、20日步长的市场快照特征
+results/metrics/                      # 聚类模型选择指标
+results/regime_profiles.md            # 自动解释后的状态画像
+results/regime_transition.csv         # 状态转移明细
+results/figures/                      # PCA/t-SNE/时间轴/转移图/网络图/对比图
+docs/presentation_outline.md          # 现场答辩提纲
+notebooks/sp500_clustering_analysis.ipynb
 ```
 
-构建静态页面：
+## 12. 复现步骤
 
 ```bash
+# 1. 生成滚动市场快照、聚类结果、状态解释和图表
+python src/dynamic_market_regime.py
+
+# 2. 可选：运行旧版前端资产层辅助看板
 npm run build
-npm run preview
 ```
 
-线上展示地址：<https://ranchotao.github.io/DataMining/>
+## 13. 当前研究结论（基于仓库可复现实验）
 
-## 15. 仍需人工补充的信息
+- 标普500市场可以被表达为少数几个动态结构状态，而不是固定不变的股票类别。
+- 高压力阶段表现为更高波动率、更深回撤、更高平均相关和更高网络密度，意味着分散化收益下降。
+- 低波动牛市或科技成长阶段通常具有较低网络同步性，并伴随行业收益分化。
+- COVID、加息周期、AI 行情附近均可通过状态切换或状态持续性变化体现结构演化。
 
-- 原始数据真实来源、下载日期、许可说明；
-- 原始价格数据的精确时间范围；
-- 标普500成分股列表的获取方式和日期；
-- 真实团队成员姓名与分工；
-- 若老师要求严格复现特征计算，需要补充从原始日频价格生成 `sp500_features.csv` 的脚本。
+## 14. 下一步优化
+
+- 接入真实 S&P 500 成分股日度复权价格和 GICS 行业分类。
+- 增加 MST、PMFG、社区发现、模块度、中心性等网络指标。
+- 使用真实 t-SNE/UMAP、HDBSCAN、Hidden Markov Model 和变点检测算法。
+- 对事件窗口进行统计检验，例如置换检验或 bootstrap 置信区间。
+- 将前端改造为市场状态时间轴交互展示，而非仅展示资产层聚类。
