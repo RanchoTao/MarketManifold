@@ -1,524 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="PCA cluster scatter">
 <rect width="100%" height="100%" fill="white"/>
-<text x="500" y="34" text-anchor="middle" font-size="24" font-weight="700">PCA 二维聚类散点图</text>
-<rect x="70" y="60" width="850" height="540" fill="#f8fafc" stroke="#cbd5e1"/>
-<circle cx="730.5" cy="414.2" r="4.8" fill="#2563eb" opacity="0.82"><title>A / Cluster 0</title></circle>
-<circle cx="546.4" cy="353.1" r="4.8" fill="#16a34a" opacity="0.82"><title>AAL / Cluster 2</title></circle>
-<circle cx="234.8" cy="258.5" r="4.8" fill="#0891b2" opacity="0.82"><title>AAP / Cluster 5</title></circle>
-<circle cx="637.8" cy="456.4" r="4.8" fill="#2563eb" opacity="0.82"><title>AAPL / Cluster 0</title></circle>
-<circle cx="866.5" cy="197.5" r="4.8" fill="#4f46e5" opacity="0.82"><title>ABBV / Cluster 7</title></circle>
-<text x="872.5" y="193.5" font-size="10" fill="#0f172a">ABBV</text>
-<circle cx="562.8" cy="347.4" r="4.8" fill="#16a34a" opacity="0.82"><title>ABC / Cluster 2</title></circle>
-<circle cx="767.0" cy="411.8" r="4.8" fill="#2563eb" opacity="0.82"><title>ABT / Cluster 0</title></circle>
-<circle cx="755.8" cy="424.8" r="4.8" fill="#2563eb" opacity="0.82"><title>ACN / Cluster 0</title></circle>
-<circle cx="799.2" cy="294.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>ADBE / Cluster 7</title></circle>
-<text x="805.2" y="290.6" font-size="10" fill="#0f172a">ADBE</text>
-<circle cx="630.1" cy="416.7" r="4.8" fill="#16a34a" opacity="0.82"><title>ADI / Cluster 2</title></circle>
-<circle cx="566.7" cy="468.8" r="4.8" fill="#dc2626" opacity="0.82"><title>ADM / Cluster 1</title></circle>
-<circle cx="635.2" cy="440.0" r="4.8" fill="#2563eb" opacity="0.82"><title>ADP / Cluster 0</title></circle>
-<circle cx="560.8" cy="379.9" r="4.8" fill="#16a34a" opacity="0.82"><title>ADS / Cluster 2</title></circle>
-<circle cx="579.4" cy="327.8" r="4.8" fill="#16a34a" opacity="0.82"><title>ADSK / Cluster 2</title></circle>
-<circle cx="581.0" cy="535.3" r="4.8" fill="#dc2626" opacity="0.82"><title>AEE / Cluster 1</title></circle>
-<circle cx="589.4" cy="544.8" r="4.8" fill="#dc2626" opacity="0.82"><title>AEP / Cluster 1</title></circle>
-<circle cx="538.1" cy="478.6" r="4.8" fill="#be123c" opacity="0.82"><title>AES / Cluster 6</title></circle>
-<circle cx="763.5" cy="381.5" r="4.8" fill="#4f46e5" opacity="0.82"><title>AET / Cluster 7</title></circle>
-<circle cx="706.5" cy="487.5" r="4.8" fill="#2563eb" opacity="0.82"><title>AFL / Cluster 0</title></circle>
-<circle cx="338.8" cy="517.9" r="4.8" fill="#be123c" opacity="0.82"><title>AGN / Cluster 6</title></circle>
-<circle cx="577.1" cy="512.5" r="4.8" fill="#dc2626" opacity="0.82"><title>AIG / Cluster 1</title></circle>
-<circle cx="542.9" cy="564.1" r="4.8" fill="#dc2626" opacity="0.82"><title>AIV / Cluster 1</title></circle>
-<circle cx="522.4" cy="499.6" r="4.8" fill="#be123c" opacity="0.82"><title>AIZ / Cluster 6</title></circle>
-<circle cx="720.2" cy="459.9" r="4.8" fill="#2563eb" opacity="0.82"><title>AJG / Cluster 0</title></circle>
-<circle cx="524.8" cy="213.1" r="4.8" fill="#9333ea" opacity="0.82"><title>AKAM / Cluster 3</title></circle>
-<circle cx="501.7" cy="390.1" r="4.8" fill="#be123c" opacity="0.82"><title>ALB / Cluster 6</title></circle>
-<circle cx="743.6" cy="152.8" r="4.8" fill="#ea580c" opacity="0.82"><title>ALGN / Cluster 4</title></circle>
-<text x="749.6" y="148.8" font-size="10" fill="#0f172a">ALGN</text>
-<circle cx="295.2" cy="450.8" r="4.8" fill="#0891b2" opacity="0.82"><title>ALK / Cluster 5</title></circle>
-<circle cx="692.1" cy="487.2" r="4.8" fill="#2563eb" opacity="0.82"><title>ALL / Cluster 0</title></circle>
-<circle cx="643.2" cy="468.8" r="4.8" fill="#dc2626" opacity="0.82"><title>ALLE / Cluster 1</title></circle>
-<circle cx="419.8" cy="408.1" r="4.8" fill="#be123c" opacity="0.82"><title>ALXN / Cluster 6</title></circle>
-<circle cx="626.6" cy="317.6" r="4.8" fill="#16a34a" opacity="0.82"><title>AMAT / Cluster 2</title></circle>
-<circle cx="292.2" cy="245.6" r="4.8" fill="#0891b2" opacity="0.82"><title>AMD / Cluster 5</title></circle>
-<circle cx="779.4" cy="432.6" r="4.8" fill="#2563eb" opacity="0.82"><title>AME / Cluster 0</title></circle>
-<circle cx="637.6" cy="442.6" r="4.8" fill="#2563eb" opacity="0.82"><title>AMG / Cluster 0</title></circle>
-<circle cx="600.1" cy="460.3" r="4.8" fill="#dc2626" opacity="0.82"><title>AMGN / Cluster 1</title></circle>
-<circle cx="679.1" cy="409.2" r="4.8" fill="#2563eb" opacity="0.82"><title>AMP / Cluster 0</title></circle>
-<circle cx="680.0" cy="449.9" r="4.8" fill="#2563eb" opacity="0.82"><title>AMT / Cluster 0</title></circle>
-<circle cx="844.0" cy="242.3" r="4.8" fill="#4f46e5" opacity="0.82"><title>AMZN / Cluster 7</title></circle>
-<text x="850.0" y="238.3" font-size="10" fill="#0f172a">AMZN</text>
-<circle cx="610.4" cy="412.2" r="4.8" fill="#16a34a" opacity="0.82"><title>ANDV / Cluster 2</title></circle>
-<circle cx="795.3" cy="331.3" r="4.8" fill="#4f46e5" opacity="0.82"><title>ANSS / Cluster 7</title></circle>
-<circle cx="763.6" cy="351.0" r="4.8" fill="#4f46e5" opacity="0.82"><title>ANTM / Cluster 7</title></circle>
-<circle cx="667.1" cy="491.5" r="4.8" fill="#2563eb" opacity="0.82"><title>AON / Cluster 0</title></circle>
-<circle cx="721.7" cy="427.2" r="4.8" fill="#2563eb" opacity="0.82"><title>AOS / Cluster 0</title></circle>
-<circle cx="337.8" cy="374.3" r="4.8" fill="#0891b2" opacity="0.82"><title>APA / Cluster 5</title></circle>
-<circle cx="462.4" cy="254.5" r="4.8" fill="#9333ea" opacity="0.82"><title>APC / Cluster 3</title></circle>
-<circle cx="680.4" cy="476.0" r="4.8" fill="#2563eb" opacity="0.82"><title>APD / Cluster 0</title></circle>
-<circle cx="752.1" cy="468.8" r="4.8" fill="#2563eb" opacity="0.82"><title>APH / Cluster 0</title></circle>
-<circle cx="629.6" cy="513.7" r="4.8" fill="#dc2626" opacity="0.82"><title>ARE / Cluster 1</title></circle>
-<circle cx="447.5" cy="350.3" r="4.8" fill="#be123c" opacity="0.82"><title>ARNC / Cluster 6</title></circle>
-<circle cx="729.9" cy="257.4" r="4.8" fill="#ea580c" opacity="0.82"><title>ATVI / Cluster 4</title></circle>
-<circle cx="521.2" cy="558.8" r="4.8" fill="#dc2626" opacity="0.82"><title>AVB / Cluster 1</title></circle>
-<circle cx="550.2" cy="410.3" r="4.8" fill="#be123c" opacity="0.82"><title>AVGO / Cluster 6</title></circle>
-<circle cx="788.7" cy="396.0" r="4.8" fill="#4f46e5" opacity="0.82"><title>AVY / Cluster 7</title></circle>
-<circle cx="608.9" cy="510.7" r="4.8" fill="#dc2626" opacity="0.82"><title>AWK / Cluster 1</title></circle>
-<circle cx="700.2" cy="467.6" r="4.8" fill="#2563eb" opacity="0.82"><title>AXP / Cluster 0</title></circle>
-<circle cx="292.6" cy="405.0" r="4.8" fill="#0891b2" opacity="0.82"><title>AYI / Cluster 5</title></circle>
-<circle cx="535.1" cy="256.1" r="4.8" fill="#9333ea" opacity="0.82"><title>AZO / Cluster 3</title></circle>
-<circle cx="895.0" cy="234.1" r="4.8" fill="#4f46e5" opacity="0.82"><title>BA / Cluster 7</title></circle>
-<text x="901.0" y="230.1" font-size="10" fill="#0f172a">BA</text>
-<circle cx="723.4" cy="334.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>BAC / Cluster 7</title></circle>
-<circle cx="726.6" cy="445.6" r="4.8" fill="#2563eb" opacity="0.82"><title>BAX / Cluster 0</title></circle>
-<circle cx="652.3" cy="419.7" r="4.8" fill="#2563eb" opacity="0.82"><title>BBT / Cluster 0</title></circle>
-<circle cx="664.0" cy="217.6" r="4.8" fill="#ea580c" opacity="0.82"><title>BBY / Cluster 4</title></circle>
-<circle cx="698.6" cy="431.3" r="4.8" fill="#2563eb" opacity="0.82"><title>BDX / Cluster 0</title></circle>
-<circle cx="551.7" cy="498.8" r="4.8" fill="#dc2626" opacity="0.82"><title>BEN / Cluster 1</title></circle>
-<circle cx="732.3" cy="305.8" r="4.8" fill="#4f46e5" opacity="0.82"><title>BF.B / Cluster 7</title></circle>
-<circle cx="626.8" cy="365.2" r="4.8" fill="#16a34a" opacity="0.82"><title>BIIB / Cluster 2</title></circle>
-<circle cx="690.1" cy="478.7" r="4.8" fill="#2563eb" opacity="0.82"><title>BK / Cluster 0</title></circle>
-<circle cx="758.5" cy="384.2" r="4.8" fill="#4f46e5" opacity="0.82"><title>BLK / Cluster 7</title></circle>
-<circle cx="595.7" cy="477.3" r="4.8" fill="#dc2626" opacity="0.82"><title>BLL / Cluster 1</title></circle>
-<circle cx="666.5" cy="427.8" r="4.8" fill="#2563eb" opacity="0.82"><title>BMY / Cluster 0</title></circle>
-<circle cx="716.7" cy="461.7" r="4.8" fill="#2563eb" opacity="0.82"><title>BRK.B / Cluster 0</title></circle>
-<circle cx="582.7" cy="463.5" r="4.8" fill="#dc2626" opacity="0.82"><title>BSX / Cluster 1</title></circle>
-<circle cx="686.5" cy="343.7" r="4.8" fill="#16a34a" opacity="0.82"><title>BWA / Cluster 2</title></circle>
-<circle cx="546.1" cy="512.3" r="4.8" fill="#dc2626" opacity="0.82"><title>BXP / Cluster 1</title></circle>
-<circle cx="714.0" cy="428.8" r="4.8" fill="#2563eb" opacity="0.82"><title>C / Cluster 0</title></circle>
-<circle cx="606.4" cy="429.3" r="4.8" fill="#16a34a" opacity="0.82"><title>CA / Cluster 2</title></circle>
-<circle cx="553.3" cy="467.3" r="4.8" fill="#dc2626" opacity="0.82"><title>CAG / Cluster 1</title></circle>
-<circle cx="415.5" cy="411.2" r="4.8" fill="#be123c" opacity="0.82"><title>CAH / Cluster 6</title></circle>
-<circle cx="808.5" cy="282.2" r="4.8" fill="#4f46e5" opacity="0.82"><title>CAT / Cluster 7</title></circle>
-<text x="814.5" y="278.2" font-size="10" fill="#0f172a">CAT</text>
-<circle cx="656.0" cy="506.1" r="4.8" fill="#dc2626" opacity="0.82"><title>CB / Cluster 1</title></circle>
-<circle cx="713.7" cy="380.8" r="4.8" fill="#2563eb" opacity="0.82"><title>CBG / Cluster 0</title></circle>
-<circle cx="726.9" cy="367.7" r="4.8" fill="#4f46e5" opacity="0.82"><title>CBOE / Cluster 7</title></circle>
-<circle cx="451.2" cy="494.9" r="4.8" fill="#be123c" opacity="0.82"><title>CBS / Cluster 6</title></circle>
-<circle cx="697.0" cy="456.0" r="4.8" fill="#2563eb" opacity="0.82"><title>CCI / Cluster 0</title></circle>
-<circle cx="679.9" cy="468.7" r="4.8" fill="#2563eb" opacity="0.82"><title>CCL / Cluster 0</title></circle>
-<circle cx="659.7" cy="417.3" r="4.8" fill="#2563eb" opacity="0.82"><title>CDNS / Cluster 0</title></circle>
-<circle cx="327.7" cy="458.6" r="4.8" fill="#0891b2" opacity="0.82"><title>CELG / Cluster 5</title></circle>
-<circle cx="623.9" cy="427.4" r="4.8" fill="#16a34a" opacity="0.82"><title>CERN / Cluster 2</title></circle>
-<circle cx="499.4" cy="204.1" r="4.8" fill="#9333ea" opacity="0.82"><title>CF / Cluster 3</title></circle>
-<circle cx="662.7" cy="309.2" r="4.8" fill="#16a34a" opacity="0.82"><title>CFG / Cluster 2</title></circle>
-<circle cx="567.2" cy="504.8" r="4.8" fill="#dc2626" opacity="0.82"><title>CHD / Cluster 1</title></circle>
-<circle cx="95.0" cy="309.0" r="4.8" fill="#0891b2" opacity="0.82"><title>CHK / Cluster 5</title></circle>
-<circle cx="700.3" cy="313.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>CHRW / Cluster 7</title></circle>
-<circle cx="530.6" cy="432.7" r="4.8" fill="#be123c" opacity="0.82"><title>CHTR / Cluster 6</title></circle>
-<circle cx="687.3" cy="418.6" r="4.8" fill="#2563eb" opacity="0.82"><title>CI / Cluster 0</title></circle>
-<circle cx="593.5" cy="521.1" r="4.8" fill="#dc2626" opacity="0.82"><title>CINF / Cluster 1</title></circle>
-<circle cx="631.8" cy="506.8" r="4.8" fill="#dc2626" opacity="0.82"><title>CL / Cluster 1</title></circle>
-<circle cx="587.7" cy="503.7" r="4.8" fill="#dc2626" opacity="0.82"><title>CLX / Cluster 1</title></circle>
-<circle cx="721.5" cy="319.8" r="4.8" fill="#4f46e5" opacity="0.82"><title>CMA / Cluster 7</title></circle>
-<circle cx="583.3" cy="449.2" r="4.8" fill="#dc2626" opacity="0.82"><title>CMCSA / Cluster 1</title></circle>
-<circle cx="765.9" cy="382.0" r="4.8" fill="#4f46e5" opacity="0.82"><title>CME / Cluster 7</title></circle>
-<circle cx="256.3" cy="389.7" r="4.8" fill="#0891b2" opacity="0.82"><title>CMG / Cluster 5</title></circle>
-<circle cx="662.3" cy="435.4" r="4.8" fill="#2563eb" opacity="0.82"><title>CMI / Cluster 0</title></circle>
-<circle cx="581.7" cy="554.8" r="4.8" fill="#dc2626" opacity="0.82"><title>CMS / Cluster 1</title></circle>
-<circle cx="734.7" cy="282.1" r="4.8" fill="#4f46e5" opacity="0.82"><title>CNC / Cluster 7</title></circle>
-<circle cx="597.7" cy="544.8" r="4.8" fill="#dc2626" opacity="0.82"><title>CNP / Cluster 1</title></circle>
-<circle cx="611.4" cy="383.6" r="4.8" fill="#16a34a" opacity="0.82"><title>COF / Cluster 2</title></circle>
-<circle cx="505.6" cy="419.2" r="4.8" fill="#be123c" opacity="0.82"><title>COG / Cluster 6</title></circle>
-<circle cx="675.9" cy="332.4" r="4.8" fill="#16a34a" opacity="0.82"><title>COL / Cluster 2</title></circle>
-<circle cx="608.7" cy="443.7" r="4.8" fill="#dc2626" opacity="0.82"><title>COO / Cluster 1</title></circle>
-<circle cx="609.5" cy="308.5" r="4.8" fill="#16a34a" opacity="0.82"><title>COP / Cluster 2</title></circle>
-<circle cx="626.3" cy="397.1" r="4.8" fill="#16a34a" opacity="0.82"><title>COST / Cluster 2</title></circle>
-<circle cx="386.7" cy="377.0" r="4.8" fill="#be123c" opacity="0.82"><title>COTY / Cluster 6</title></circle>
-<circle cx="386.8" cy="477.7" r="4.8" fill="#be123c" opacity="0.82"><title>CPB / Cluster 6</title></circle>
-<circle cx="760.5" cy="402.0" r="4.8" fill="#2563eb" opacity="0.82"><title>CRM / Cluster 0</title></circle>
-<circle cx="732.8" cy="373.1" r="4.8" fill="#4f46e5" opacity="0.82"><title>CSCO / Cluster 7</title></circle>
-<circle cx="557.2" cy="446.0" r="4.8" fill="#be123c" opacity="0.82"><title>CSRA / Cluster 6</title></circle>
-<circle cx="604.4" cy="411.7" r="4.8" fill="#16a34a" opacity="0.82"><title>CSX / Cluster 2</title></circle>
-<circle cx="744.7" cy="400.0" r="4.8" fill="#2563eb" opacity="0.82"><title>CTAS / Cluster 0</title></circle>
-<circle cx="219.7" cy="367.8" r="4.8" fill="#0891b2" opacity="0.82"><title>CTL / Cluster 5</title></circle>
-<circle cx="733.0" cy="452.8" r="4.8" fill="#2563eb" opacity="0.82"><title>CTSH / Cluster 0</title></circle>
-<circle cx="643.8" cy="404.7" r="4.8" fill="#16a34a" opacity="0.82"><title>CTXS / Cluster 2</title></circle>
-<circle cx="523.0" cy="456.4" r="4.8" fill="#be123c" opacity="0.82"><title>CVS / Cluster 6</title></circle>
-<circle cx="607.3" cy="466.9" r="4.8" fill="#dc2626" opacity="0.82"><title>CVX / Cluster 1</title></circle>
-<circle cx="583.0" cy="315.5" r="4.8" fill="#16a34a" opacity="0.82"><title>CXO / Cluster 2</title></circle>
-<circle cx="610.2" cy="531.1" r="4.8" fill="#dc2626" opacity="0.82"><title>D / Cluster 1</title></circle>
-<circle cx="586.4" cy="382.7" r="4.8" fill="#16a34a" opacity="0.82"><title>DAL / Cluster 2</title></circle>
-<circle cx="749.8" cy="358.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>DE / Cluster 7</title></circle>
-<circle cx="645.1" cy="370.7" r="4.8" fill="#16a34a" opacity="0.82"><title>DFS / Cluster 2</title></circle>
-<circle cx="704.1" cy="330.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>DG / Cluster 7</title></circle>
-<circle cx="587.5" cy="494.3" r="4.8" fill="#dc2626" opacity="0.82"><title>DGX / Cluster 1</title></circle>
-<circle cx="756.1" cy="321.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>DHI / Cluster 7</title></circle>
-<circle cx="709.0" cy="444.2" r="4.8" fill="#2563eb" opacity="0.82"><title>DHR / Cluster 0</title></circle>
-<circle cx="587.7" cy="484.5" r="4.8" fill="#dc2626" opacity="0.82"><title>DIS / Cluster 1</title></circle>
-<circle cx="335.5" cy="327.2" r="4.8" fill="#0891b2" opacity="0.82"><title>DISCA / Cluster 5</title></circle>
-<circle cx="319.5" cy="322.2" r="4.8" fill="#0891b2" opacity="0.82"><title>DISCK / Cluster 5</title></circle>
-<circle cx="344.6" cy="476.9" r="4.8" fill="#be123c" opacity="0.82"><title>DISH / Cluster 6</title></circle>
-<circle cx="535.6" cy="479.0" r="4.8" fill="#be123c" opacity="0.82"><title>DLR / Cluster 6</title></circle>
-<circle cx="720.4" cy="265.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>DLTR / Cluster 7</title></circle>
-<circle cx="715.7" cy="410.9" r="4.8" fill="#2563eb" opacity="0.82"><title>DOV / Cluster 0</title></circle>
-<circle cx="681.2" cy="294.0" r="4.8" fill="#16a34a" opacity="0.82"><title>DPS / Cluster 2</title></circle>
-<circle cx="575.2" cy="529.1" r="4.8" fill="#dc2626" opacity="0.82"><title>DRE / Cluster 1</title></circle>
-<circle cx="663.6" cy="362.2" r="4.8" fill="#16a34a" opacity="0.82"><title>DRI / Cluster 2</title></circle>
-<circle cx="603.2" cy="549.8" r="4.8" fill="#dc2626" opacity="0.82"><title>DTE / Cluster 1</title></circle>
-<circle cx="561.1" cy="565.8" r="4.8" fill="#dc2626" opacity="0.82"><title>DUK / Cluster 1</title></circle>
-<circle cx="598.5" cy="252.4" r="4.8" fill="#9333ea" opacity="0.82"><title>DVA / Cluster 3</title></circle>
-<circle cx="425.0" cy="305.2" r="4.8" fill="#9333ea" opacity="0.82"><title>DVN / Cluster 3</title></circle>
-<circle cx="657.7" cy="337.8" r="4.8" fill="#16a34a" opacity="0.82"><title>EA / Cluster 2</title></circle>
-<circle cx="673.3" cy="355.8" r="4.8" fill="#16a34a" opacity="0.82"><title>EBAY / Cluster 2</title></circle>
-<circle cx="689.0" cy="533.4" r="4.8" fill="#dc2626" opacity="0.82"><title>ECL / Cluster 1</title></circle>
-<circle cx="591.2" cy="549.8" r="4.8" fill="#dc2626" opacity="0.82"><title>ED / Cluster 1</title></circle>
-<circle cx="331.8" cy="325.7" r="4.8" fill="#0891b2" opacity="0.82"><title>EFX / Cluster 5</title></circle>
-<circle cx="413.4" cy="525.3" r="4.8" fill="#be123c" opacity="0.82"><title>EIX / Cluster 6</title></circle>
-<circle cx="832.9" cy="335.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>EL / Cluster 7</title></circle>
-<text x="838.9" y="331.4" font-size="10" fill="#0f172a">EL</text>
-<circle cx="743.7" cy="433.0" r="4.8" fill="#2563eb" opacity="0.82"><title>EMN / Cluster 0</title></circle>
-<circle cx="666.5" cy="437.0" r="4.8" fill="#2563eb" opacity="0.82"><title>EMR / Cluster 0</title></circle>
-<circle cx="617.2" cy="387.7" r="4.8" fill="#16a34a" opacity="0.82"><title>EOG / Cluster 2</title></circle>
-<circle cx="607.8" cy="482.7" r="4.8" fill="#dc2626" opacity="0.82"><title>EQIX / Cluster 1</title></circle>
-<circle cx="541.6" cy="561.4" r="4.8" fill="#dc2626" opacity="0.82"><title>EQR / Cluster 1</title></circle>
-<circle cx="326.8" cy="399.7" r="4.8" fill="#0891b2" opacity="0.82"><title>EQT / Cluster 5</title></circle>
-<circle cx="600.0" cy="534.4" r="4.8" fill="#dc2626" opacity="0.82"><title>ES / Cluster 1</title></circle>
-<circle cx="607.6" cy="340.1" r="4.8" fill="#16a34a" opacity="0.82"><title>ESRX / Cluster 2</title></circle>
-<circle cx="533.1" cy="549.7" r="4.8" fill="#dc2626" opacity="0.82"><title>ESS / Cluster 1</title></circle>
-<circle cx="742.0" cy="323.8" r="4.8" fill="#4f46e5" opacity="0.82"><title>ETFC / Cluster 7</title></circle>
-<circle cx="666.8" cy="434.6" r="4.8" fill="#2563eb" opacity="0.82"><title>ETN / Cluster 0</title></circle>
-<circle cx="591.1" cy="515.8" r="4.8" fill="#dc2626" opacity="0.82"><title>ETR / Cluster 1</title></circle>
-<circle cx="103.2" cy="322.2" r="4.8" fill="#0891b2" opacity="0.82"><title>EVHC / Cluster 5</title></circle>
-<circle cx="676.6" cy="355.4" r="4.8" fill="#16a34a" opacity="0.82"><title>EW / Cluster 2</title></circle>
-<circle cx="598.0" cy="504.4" r="4.8" fill="#dc2626" opacity="0.82"><title>EXC / Cluster 1</title></circle>
-<circle cx="684.9" cy="443.5" r="4.8" fill="#2563eb" opacity="0.82"><title>EXPD / Cluster 0</title></circle>
-<circle cx="475.2" cy="422.8" r="4.8" fill="#be123c" opacity="0.82"><title>EXPE / Cluster 6</title></circle>
-<circle cx="631.3" cy="450.2" r="4.8" fill="#dc2626" opacity="0.82"><title>EXR / Cluster 1</title></circle>
-<circle cx="514.2" cy="466.0" r="4.8" fill="#be123c" opacity="0.82"><title>F / Cluster 6</title></circle>
-<circle cx="590.2" cy="336.0" r="4.8" fill="#16a34a" opacity="0.82"><title>FAST / Cluster 2</title></circle>
-<circle cx="710.0" cy="436.8" r="4.8" fill="#2563eb" opacity="0.82"><title>FB / Cluster 0</title></circle>
-<circle cx="628.3" cy="478.7" r="4.8" fill="#dc2626" opacity="0.82"><title>FBHS / Cluster 1</title></circle>
-<circle cx="501.4" cy="204.1" r="4.8" fill="#9333ea" opacity="0.82"><title>FCX / Cluster 3</title></circle>
-<circle cx="741.7" cy="392.8" r="4.8" fill="#2563eb" opacity="0.82"><title>FDX / Cluster 0</title></circle>
-<circle cx="576.4" cy="467.7" r="4.8" fill="#dc2626" opacity="0.82"><title>FE / Cluster 1</title></circle>
-<circle cx="582.4" cy="368.4" r="4.8" fill="#16a34a" opacity="0.82"><title>FFIV / Cluster 2</title></circle>
-<circle cx="717.8" cy="486.2" r="4.8" fill="#2563eb" opacity="0.82"><title>FIS / Cluster 0</title></circle>
-<circle cx="690.3" cy="487.9" r="4.8" fill="#2563eb" opacity="0.82"><title>FISV / Cluster 0</title></circle>
-<circle cx="658.5" cy="364.4" r="4.8" fill="#16a34a" opacity="0.82"><title>FITB / Cluster 2</title></circle>
-<circle cx="186.1" cy="205.0" r="4.8" fill="#0891b2" opacity="0.82"><title>FL / Cluster 5</title></circle>
-<circle cx="729.9" cy="337.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>FLIR / Cluster 7</title></circle>
-<circle cx="499.2" cy="123.3" r="4.8" fill="#9333ea" opacity="0.82"><title>FLR / Cluster 3</title></circle>
-<circle cx="463.2" cy="379.2" r="4.8" fill="#be123c" opacity="0.82"><title>FLS / Cluster 6</title></circle>
-<circle cx="646.6" cy="373.3" r="4.8" fill="#16a34a" opacity="0.82"><title>FMC / Cluster 2</title></circle>
-<circle cx="623.5" cy="289.9" r="4.8" fill="#16a34a" opacity="0.82"><title>FOX / Cluster 2</title></circle>
-<circle cx="619.3" cy="287.2" r="4.8" fill="#16a34a" opacity="0.82"><title>FOXA / Cluster 2</title></circle>
-<circle cx="475.3" cy="533.6" r="4.8" fill="#be123c" opacity="0.82"><title>FRT / Cluster 6</title></circle>
-<circle cx="516.7" cy="349.3" r="4.8" fill="#9333ea" opacity="0.82"><title>FTI / Cluster 3</title></circle>
-<circle cx="714.3" cy="456.7" r="4.8" fill="#2563eb" opacity="0.82"><title>FTV / Cluster 0</title></circle>
-<circle cx="686.2" cy="469.0" r="4.8" fill="#2563eb" opacity="0.82"><title>GD / Cluster 0</title></circle>
-<circle cx="222.3" cy="506.4" r="4.8" fill="#0891b2" opacity="0.82"><title>GE / Cluster 5</title></circle>
-<circle cx="455.2" cy="379.2" r="4.8" fill="#be123c" opacity="0.82"><title>GGP / Cluster 6</title></circle>
-<circle cx="632.7" cy="370.7" r="4.8" fill="#16a34a" opacity="0.82"><title>GILD / Cluster 2</title></circle>
-<circle cx="529.6" cy="479.4" r="4.8" fill="#be123c" opacity="0.82"><title>GIS / Cluster 6</title></circle>
-<circle cx="615.4" cy="449.6" r="4.8" fill="#dc2626" opacity="0.82"><title>GLW / Cluster 1</title></circle>
-<circle cx="665.2" cy="371.6" r="4.8" fill="#16a34a" opacity="0.82"><title>GM / Cluster 2</title></circle>
-<circle cx="707.4" cy="418.8" r="4.8" fill="#2563eb" opacity="0.82"><title>GOOG / Cluster 0</title></circle>
-<circle cx="697.9" cy="425.7" r="4.8" fill="#2563eb" opacity="0.82"><title>GOOGL / Cluster 0</title></circle>
-<circle cx="601.6" cy="394.4" r="4.8" fill="#16a34a" opacity="0.82"><title>GPC / Cluster 2</title></circle>
-<circle cx="719.2" cy="420.7" r="4.8" fill="#2563eb" opacity="0.82"><title>GPN / Cluster 0</title></circle>
-<circle cx="664.4" cy="202.9" r="4.8" fill="#ea580c" opacity="0.82"><title>GPS / Cluster 4</title></circle>
-<circle cx="720.8" cy="390.6" r="4.8" fill="#2563eb" opacity="0.82"><title>GRMN / Cluster 0</title></circle>
-<circle cx="614.7" cy="412.5" r="4.8" fill="#16a34a" opacity="0.82"><title>GS / Cluster 2</title></circle>
-<circle cx="559.0" cy="395.7" r="4.8" fill="#16a34a" opacity="0.82"><title>GT / Cluster 2</title></circle>
-<circle cx="510.4" cy="140.9" r="4.8" fill="#9333ea" opacity="0.82"><title>GWW / Cluster 3</title></circle>
-<circle cx="491.2" cy="322.1" r="4.8" fill="#9333ea" opacity="0.82"><title>HAL / Cluster 3</title></circle>
-<circle cx="532.5" cy="394.2" r="4.8" fill="#be123c" opacity="0.82"><title>HAS / Cluster 6</title></circle>
-<circle cx="643.3" cy="373.0" r="4.8" fill="#16a34a" opacity="0.82"><title>HBAN / Cluster 2</title></circle>
-<circle cx="494.8" cy="407.7" r="4.8" fill="#be123c" opacity="0.82"><title>HBI / Cluster 6</title></circle>
-<circle cx="656.9" cy="341.5" r="4.8" fill="#16a34a" opacity="0.82"><title>HCA / Cluster 2</title></circle>
-<circle cx="462.6" cy="545.9" r="4.8" fill="#be123c" opacity="0.82"><title>HCN / Cluster 6</title></circle>
-<circle cx="415.1" cy="530.3" r="4.8" fill="#be123c" opacity="0.82"><title>HCP / Cluster 6</title></circle>
-<circle cx="751.9" cy="390.2" r="4.8" fill="#4f46e5" opacity="0.82"><title>HD / Cluster 7</title></circle>
-<circle cx="438.0" cy="343.2" r="4.8" fill="#9333ea" opacity="0.82"><title>HES / Cluster 3</title></circle>
-<circle cx="671.1" cy="495.8" r="4.8" fill="#2563eb" opacity="0.82"><title>HIG / Cluster 0</title></circle>
-<circle cx="627.7" cy="398.3" r="4.8" fill="#16a34a" opacity="0.82"><title>HII / Cluster 2</title></circle>
-<circle cx="784.8" cy="352.1" r="4.8" fill="#4f46e5" opacity="0.82"><title>HLT / Cluster 7</title></circle>
-<circle cx="458.2" cy="400.2" r="4.8" fill="#be123c" opacity="0.82"><title>HOG / Cluster 6</title></circle>
-<circle cx="561.2" cy="423.7" r="4.8" fill="#be123c" opacity="0.82"><title>HOLX / Cluster 6</title></circle>
-<circle cx="722.4" cy="479.7" r="4.8" fill="#2563eb" opacity="0.82"><title>HON / Cluster 0</title></circle>
-<circle cx="503.9" cy="188.8" r="4.8" fill="#9333ea" opacity="0.82"><title>HP / Cluster 3</title></circle>
-<circle cx="211.0" cy="286.1" r="4.8" fill="#0891b2" opacity="0.82"><title>HPE / Cluster 5</title></circle>
-<circle cx="689.9" cy="392.1" r="4.8" fill="#2563eb" opacity="0.82"><title>HPQ / Cluster 0</title></circle>
-<circle cx="480.5" cy="376.8" r="4.8" fill="#be123c" opacity="0.82"><title>HRB / Cluster 6</title></circle>
-<circle cx="530.5" cy="474.6" r="4.8" fill="#be123c" opacity="0.82"><title>HRL / Cluster 6</title></circle>
-<circle cx="801.6" cy="374.5" r="4.8" fill="#4f46e5" opacity="0.82"><title>HRS / Cluster 7</title></circle>
-<circle cx="444.7" cy="465.9" r="4.8" fill="#be123c" opacity="0.82"><title>HSIC / Cluster 6</title></circle>
-<circle cx="638.7" cy="442.1" r="4.8" fill="#2563eb" opacity="0.82"><title>HST / Cluster 0</title></circle>
-<circle cx="577.3" cy="526.1" r="4.8" fill="#dc2626" opacity="0.82"><title>HSY / Cluster 1</title></circle>
-<circle cx="682.7" cy="428.0" r="4.8" fill="#2563eb" opacity="0.82"><title>HUM / Cluster 0</title></circle>
-<circle cx="547.2" cy="452.1" r="4.8" fill="#dc2626" opacity="0.82"><title>IBM / Cluster 1</title></circle>
-<circle cx="681.7" cy="428.8" r="4.8" fill="#2563eb" opacity="0.82"><title>ICE / Cluster 0</title></circle>
-<circle cx="663.5" cy="381.3" r="4.8" fill="#16a34a" opacity="0.82"><title>IDXX / Cluster 2</title></circle>
-<circle cx="669.5" cy="470.1" r="4.8" fill="#2563eb" opacity="0.82"><title>IFF / Cluster 0</title></circle>
-<circle cx="654.7" cy="340.4" r="4.8" fill="#16a34a" opacity="0.82"><title>ILMN / Cluster 2</title></circle>
-<circle cx="213.6" cy="401.8" r="4.8" fill="#0891b2" opacity="0.82"><title>INCY / Cluster 5</title></circle>
-<circle cx="639.6" cy="483.9" r="4.8" fill="#dc2626" opacity="0.82"><title>INFO / Cluster 1</title></circle>
-<circle cx="697.9" cy="361.6" r="4.8" fill="#16a34a" opacity="0.82"><title>INTC / Cluster 2</title></circle>
-<circle cx="734.7" cy="389.5" r="4.8" fill="#2563eb" opacity="0.82"><title>INTU / Cluster 0</title></circle>
-<circle cx="663.5" cy="442.1" r="4.8" fill="#2563eb" opacity="0.82"><title>IP / Cluster 0</title></circle>
-<circle cx="474.9" cy="395.1" r="4.8" fill="#be123c" opacity="0.82"><title>IPG / Cluster 6</title></circle>
-<circle cx="681.9" cy="427.4" r="4.8" fill="#2563eb" opacity="0.82"><title>IQV / Cluster 0</title></circle>
-<circle cx="637.9" cy="450.0" r="4.8" fill="#2563eb" opacity="0.82"><title>IR / Cluster 0</title></circle>
-<circle cx="500.3" cy="501.9" r="4.8" fill="#be123c" opacity="0.82"><title>IRM / Cluster 6</title></circle>
-<circle cx="801.7" cy="304.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>ISRG / Cluster 7</title></circle>
-<text x="807.7" y="300.6" font-size="10" fill="#0f172a">ISRG</text>
-<circle cx="631.3" cy="461.9" r="4.8" fill="#dc2626" opacity="0.82"><title>IT / Cluster 1</title></circle>
-<circle cx="726.2" cy="431.4" r="4.8" fill="#2563eb" opacity="0.82"><title>ITW / Cluster 0</title></circle>
-<circle cx="600.7" cy="466.3" r="4.8" fill="#dc2626" opacity="0.82"><title>IVZ / Cluster 1</title></circle>
-<circle cx="678.2" cy="353.5" r="4.8" fill="#16a34a" opacity="0.82"><title>JBHT / Cluster 2</title></circle>
-<circle cx="529.3" cy="471.7" r="4.8" fill="#be123c" opacity="0.82"><title>JCI / Cluster 6</title></circle>
-<circle cx="650.7" cy="359.9" r="4.8" fill="#16a34a" opacity="0.82"><title>JEC / Cluster 2</title></circle>
-<circle cx="654.6" cy="502.8" r="4.8" fill="#dc2626" opacity="0.82"><title>JNJ / Cluster 1</title></circle>
-<circle cx="492.5" cy="456.1" r="4.8" fill="#be123c" opacity="0.82"><title>JNPR / Cluster 6</title></circle>
-<circle cx="723.4" cy="397.5" r="4.8" fill="#2563eb" opacity="0.82"><title>JPM / Cluster 0</title></circle>
-<circle cx="500.6" cy="302.2" r="4.8" fill="#9333ea" opacity="0.82"><title>JWN / Cluster 3</title></circle>
-<circle cx="500.9" cy="482.6" r="4.8" fill="#be123c" opacity="0.82"><title>K / Cluster 6</title></circle>
-<circle cx="648.2" cy="376.6" r="4.8" fill="#16a34a" opacity="0.82"><title>KEY / Cluster 2</title></circle>
-<circle cx="477.1" cy="525.1" r="4.8" fill="#be123c" opacity="0.82"><title>KHC / Cluster 6</title></circle>
-<circle cx="265.9" cy="491.2" r="4.8" fill="#0891b2" opacity="0.82"><title>KIM / Cluster 5</title></circle>
-<circle cx="594.8" cy="346.7" r="4.8" fill="#16a34a" opacity="0.82"><title>KLAC / Cluster 2</title></circle>
-<circle cx="547.5" cy="518.4" r="4.8" fill="#dc2626" opacity="0.82"><title>KMB / Cluster 1</title></circle>
-<circle cx="455.0" cy="506.2" r="4.8" fill="#be123c" opacity="0.82"><title>KMI / Cluster 6</title></circle>
-<circle cx="534.5" cy="420.2" r="4.8" fill="#be123c" opacity="0.82"><title>KMX / Cluster 6</title></circle>
-<circle cx="662.7" cy="542.3" r="4.8" fill="#dc2626" opacity="0.82"><title>KO / Cluster 1</title></circle>
-<circle cx="772.2" cy="141.2" r="4.8" fill="#ea580c" opacity="0.82"><title>KORS / Cluster 4</title></circle>
-<text x="778.2" y="137.2" font-size="10" fill="#0f172a">KORS</text>
-<circle cx="406.6" cy="249.2" r="4.8" fill="#9333ea" opacity="0.82"><title>KR / Cluster 3</title></circle>
-<circle cx="719.4" cy="134.6" r="4.8" fill="#ea580c" opacity="0.82"><title>KSS / Cluster 4</title></circle>
-<text x="725.4" y="130.6" font-size="10" fill="#0f172a">KSS</text>
-<circle cx="667.4" cy="435.6" r="4.8" fill="#2563eb" opacity="0.82"><title>KSU / Cluster 0</title></circle>
-<circle cx="640.4" cy="530.4" r="4.8" fill="#dc2626" opacity="0.82"><title>L / Cluster 1</title></circle>
-<circle cx="352.1" cy="202.8" r="4.8" fill="#9333ea" opacity="0.82"><title>LB / Cluster 3</title></circle>
-<circle cx="545.0" cy="480.4" r="4.8" fill="#dc2626" opacity="0.82"><title>LEG / Cluster 1</title></circle>
-<circle cx="658.3" cy="350.7" r="4.8" fill="#16a34a" opacity="0.82"><title>LEN / Cluster 2</title></circle>
-<circle cx="693.8" cy="435.3" r="4.8" fill="#2563eb" opacity="0.82"><title>LH / Cluster 0</title></circle>
-<circle cx="696.4" cy="396.0" r="4.8" fill="#2563eb" opacity="0.82"><title>LKQ / Cluster 0</title></circle>
-<circle cx="728.1" cy="433.2" r="4.8" fill="#2563eb" opacity="0.82"><title>LLL / Cluster 0</title></circle>
-<circle cx="589.6" cy="518.7" r="4.8" fill="#dc2626" opacity="0.82"><title>LLY / Cluster 1</title></circle>
-<circle cx="761.2" cy="458.0" r="4.8" fill="#2563eb" opacity="0.82"><title>LMT / Cluster 0</title></circle>
-<circle cx="627.3" cy="419.5" r="4.8" fill="#16a34a" opacity="0.82"><title>LNC / Cluster 2</title></circle>
-<circle cx="578.0" cy="541.9" r="4.8" fill="#dc2626" opacity="0.82"><title>LNT / Cluster 1</title></circle>
-<circle cx="705.1" cy="313.2" r="4.8" fill="#4f46e5" opacity="0.82"><title>LOW / Cluster 7</title></circle>
-<circle cx="619.0" cy="285.4" r="4.8" fill="#16a34a" opacity="0.82"><title>LRCX / Cluster 2</title></circle>
-<circle cx="578.8" cy="462.3" r="4.8" fill="#dc2626" opacity="0.82"><title>LUK / Cluster 1</title></circle>
-<circle cx="567.6" cy="395.7" r="4.8" fill="#16a34a" opacity="0.82"><title>LUV / Cluster 2</title></circle>
-<circle cx="664.7" cy="356.2" r="4.8" fill="#16a34a" opacity="0.82"><title>LYB / Cluster 2</title></circle>
-<circle cx="285.4" cy="226.9" r="4.8" fill="#0891b2" opacity="0.82"><title>M / Cluster 5</title></circle>
-<circle cx="833.8" cy="363.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>MA / Cluster 7</title></circle>
-<circle cx="518.6" cy="547.5" r="4.8" fill="#dc2626" opacity="0.82"><title>MAA / Cluster 1</title></circle>
-<circle cx="491.2" cy="404.6" r="4.8" fill="#be123c" opacity="0.82"><title>MAC / Cluster 6</title></circle>
-<circle cx="822.5" cy="301.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>MAR / Cluster 7</title></circle>
-<text x="828.5" y="297.6" font-size="10" fill="#0f172a">MAR</text>
-<circle cx="701.7" cy="416.3" r="4.8" fill="#2563eb" opacity="0.82"><title>MAS / Cluster 0</title></circle>
-<circle cx="204.4" cy="251.3" r="4.8" fill="#0891b2" opacity="0.82"><title>MAT / Cluster 5</title></circle>
-<circle cx="727.9" cy="467.5" r="4.8" fill="#2563eb" opacity="0.82"><title>MCD / Cluster 0</title></circle>
-<circle cx="577.8" cy="415.7" r="4.8" fill="#16a34a" opacity="0.82"><title>MCHP / Cluster 2</title></circle>
-<circle cx="548.1" cy="407.2" r="4.8" fill="#be123c" opacity="0.82"><title>MCK / Cluster 6</title></circle>
-<circle cx="781.6" cy="384.5" r="4.8" fill="#4f46e5" opacity="0.82"><title>MCO / Cluster 7</title></circle>
-<circle cx="586.9" cy="476.5" r="4.8" fill="#dc2626" opacity="0.82"><title>MDLZ / Cluster 1</title></circle>
-<circle cx="616.5" cy="500.5" r="4.8" fill="#dc2626" opacity="0.82"><title>MDT / Cluster 1</title></circle>
-<circle cx="522.8" cy="460.7" r="4.8" fill="#be123c" opacity="0.82"><title>MET / Cluster 6</title></circle>
-<circle cx="624.7" cy="367.3" r="4.8" fill="#16a34a" opacity="0.82"><title>MGM / Cluster 2</title></circle>
-<circle cx="711.9" cy="471.0" r="4.8" fill="#2563eb" opacity="0.82"><title>MHK / Cluster 0</title></circle>
-<circle cx="628.0" cy="449.7" r="4.8" fill="#dc2626" opacity="0.82"><title>MKC / Cluster 1</title></circle>
-<circle cx="536.0" cy="399.6" r="4.8" fill="#be123c" opacity="0.82"><title>MLM / Cluster 6</title></circle>
-<circle cx="704.9" cy="497.5" r="4.8" fill="#2563eb" opacity="0.82"><title>MMC / Cluster 0</title></circle>
-<circle cx="722.0" cy="436.4" r="4.8" fill="#2563eb" opacity="0.82"><title>MMM / Cluster 0</title></circle>
-<circle cx="768.9" cy="348.1" r="4.8" fill="#4f46e5" opacity="0.82"><title>MNST / Cluster 7</title></circle>
-<circle cx="551.3" cy="467.2" r="4.8" fill="#dc2626" opacity="0.82"><title>MO / Cluster 1</title></circle>
-<circle cx="697.3" cy="525.6" r="4.8" fill="#2563eb" opacity="0.82"><title>MON / Cluster 0</title></circle>
-<circle cx="394.8" cy="292.3" r="4.8" fill="#9333ea" opacity="0.82"><title>MOS / Cluster 3</title></circle>
-<circle cx="614.5" cy="239.4" r="4.8" fill="#ea580c" opacity="0.82"><title>MPC / Cluster 4</title></circle>
-<circle cx="474.4" cy="443.1" r="4.8" fill="#be123c" opacity="0.82"><title>MRK / Cluster 6</title></circle>
-<circle cx="427.8" cy="92.7" r="4.8" fill="#9333ea" opacity="0.82"><title>MRO / Cluster 3</title></circle>
-<circle cx="670.6" cy="391.3" r="4.8" fill="#16a34a" opacity="0.82"><title>MS / Cluster 2</title></circle>
-<circle cx="776.0" cy="389.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>MSFT / Cluster 7</title></circle>
-<circle cx="721.9" cy="415.0" r="4.8" fill="#2563eb" opacity="0.82"><title>MSI / Cluster 0</title></circle>
-<circle cx="636.1" cy="412.6" r="4.8" fill="#16a34a" opacity="0.82"><title>MTB / Cluster 2</title></circle>
-<circle cx="719.0" cy="417.3" r="4.8" fill="#2563eb" opacity="0.82"><title>MTD / Cluster 0</title></circle>
-<circle cx="722.7" cy="85.0" r="4.8" fill="#ea580c" opacity="0.82"><title>MU / Cluster 4</title></circle>
-<text x="728.7" y="81.0" font-size="10" fill="#0f172a">MU</text>
-<circle cx="490.9" cy="240.2" r="4.8" fill="#9333ea" opacity="0.82"><title>MYL / Cluster 3</title></circle>
-<circle cx="416.8" cy="333.3" r="4.8" fill="#9333ea" opacity="0.82"><title>NAVI / Cluster 3</title></circle>
-<circle cx="351.2" cy="322.3" r="4.8" fill="#9333ea" opacity="0.82"><title>NBL / Cluster 3</title></circle>
-<circle cx="602.0" cy="407.8" r="4.8" fill="#16a34a" opacity="0.82"><title>NCLH / Cluster 2</title></circle>
-<circle cx="678.0" cy="512.3" r="4.8" fill="#2563eb" opacity="0.82"><title>NDAQ / Cluster 0</title></circle>
-<circle cx="687.9" cy="508.3" r="4.8" fill="#2563eb" opacity="0.82"><title>NEE / Cluster 0</title></circle>
-<circle cx="562.0" cy="428.5" r="4.8" fill="#be123c" opacity="0.82"><title>NEM / Cluster 6</title></circle>
-<circle cx="828.1" cy="143.1" r="4.8" fill="#ea580c" opacity="0.82"><title>NFLX / Cluster 4</title></circle>
-<text x="834.1" y="139.1" font-size="10" fill="#0f172a">NFLX</text>
-<circle cx="300.3" cy="252.8" r="4.8" fill="#0891b2" opacity="0.82"><title>NFX / Cluster 5</title></circle>
-<circle cx="580.8" cy="536.5" r="4.8" fill="#dc2626" opacity="0.82"><title>NI / Cluster 1</title></circle>
-<circle cx="633.0" cy="389.1" r="4.8" fill="#16a34a" opacity="0.82"><title>NKE / Cluster 2</title></circle>
-<circle cx="488.0" cy="475.8" r="4.8" fill="#be123c" opacity="0.82"><title>NLSN / Cluster 6</title></circle>
-<circle cx="800.2" cy="403.5" r="4.8" fill="#4f46e5" opacity="0.82"><title>NOC / Cluster 7</title></circle>
-<circle cx="476.7" cy="357.9" r="4.8" fill="#9333ea" opacity="0.82"><title>NOV / Cluster 3</title></circle>
-<circle cx="564.3" cy="215.7" r="4.8" fill="#ea580c" opacity="0.82"><title>NRG / Cluster 4</title></circle>
-<circle cx="655.0" cy="339.9" r="4.8" fill="#16a34a" opacity="0.82"><title>NSC / Cluster 2</title></circle>
-<circle cx="729.9" cy="247.3" r="4.8" fill="#4f46e5" opacity="0.82"><title>NTAP / Cluster 7</title></circle>
-<circle cx="669.0" cy="415.3" r="4.8" fill="#2563eb" opacity="0.82"><title>NTRS / Cluster 0</title></circle>
-<circle cx="582.8" cy="376.1" r="4.8" fill="#16a34a" opacity="0.82"><title>NUE / Cluster 2</title></circle>
-<circle cx="703.4" cy="103.3" r="4.8" fill="#ea580c" opacity="0.82"><title>NVDA / Cluster 4</title></circle>
-<text x="709.4" y="99.3" font-size="10" fill="#0f172a">NVDA</text>
-<circle cx="104.7" cy="303.6" r="4.8" fill="#0891b2" opacity="0.82"><title>NWL / Cluster 5</title></circle>
-<circle cx="692.3" cy="398.4" r="4.8" fill="#2563eb" opacity="0.82"><title>NWS / Cluster 0</title></circle>
-<circle cx="701.7" cy="396.6" r="4.8" fill="#2563eb" opacity="0.82"><title>NWSA / Cluster 0</title></circle>
-<circle cx="483.4" cy="534.2" r="4.8" fill="#be123c" opacity="0.82"><title>O / Cluster 6</title></circle>
-<circle cx="584.3" cy="408.5" r="4.8" fill="#16a34a" opacity="0.82"><title>OKE / Cluster 2</title></circle>
-<circle cx="507.8" cy="476.3" r="4.8" fill="#be123c" opacity="0.82"><title>OMC / Cluster 6</title></circle>
-<circle cx="646.5" cy="455.1" r="4.8" fill="#2563eb" opacity="0.82"><title>ORCL / Cluster 0</title></circle>
-<circle cx="454.5" cy="256.2" r="4.8" fill="#9333ea" opacity="0.82"><title>ORLY / Cluster 3</title></circle>
-<circle cx="624.7" cy="422.8" r="4.8" fill="#16a34a" opacity="0.82"><title>OXY / Cluster 2</title></circle>
-<circle cx="674.1" cy="428.2" r="4.8" fill="#2563eb" opacity="0.82"><title>PAYX / Cluster 0</title></circle>
-<circle cx="611.1" cy="438.6" r="4.8" fill="#dc2626" opacity="0.82"><title>PBCT / Cluster 1</title></circle>
-<circle cx="597.8" cy="451.2" r="4.8" fill="#dc2626" opacity="0.82"><title>PCAR / Cluster 1</title></circle>
-<circle cx="252.9" cy="503.6" r="4.8" fill="#0891b2" opacity="0.82"><title>PCG / Cluster 5</title></circle>
-<circle cx="579.8" cy="420.4" r="4.8" fill="#16a34a" opacity="0.82"><title>PCLN / Cluster 2</title></circle>
-<circle cx="412.0" cy="443.0" r="4.8" fill="#be123c" opacity="0.82"><title>PDCO / Cluster 6</title></circle>
-<circle cx="665.9" cy="495.0" r="4.8" fill="#dc2626" opacity="0.82"><title>PEG / Cluster 1</title></circle>
-<circle cx="663.3" cy="541.6" r="4.8" fill="#dc2626" opacity="0.82"><title>PEP / Cluster 1</title></circle>
-<circle cx="659.4" cy="495.7" r="4.8" fill="#dc2626" opacity="0.82"><title>PFE / Cluster 1</title></circle>
-<circle cx="594.9" cy="478.2" r="4.8" fill="#dc2626" opacity="0.82"><title>PFG / Cluster 1</title></circle>
-<circle cx="583.0" cy="566.5" r="4.8" fill="#dc2626" opacity="0.82"><title>PG / Cluster 1</title></circle>
-<circle cx="741.8" cy="426.5" r="4.8" fill="#2563eb" opacity="0.82"><title>PGR / Cluster 0</title></circle>
-<circle cx="680.2" cy="414.0" r="4.8" fill="#2563eb" opacity="0.82"><title>PH / Cluster 0</title></circle>
-<circle cx="700.0" cy="361.7" r="4.8" fill="#4f46e5" opacity="0.82"><title>PHM / Cluster 7</title></circle>
-<circle cx="681.9" cy="437.6" r="4.8" fill="#2563eb" opacity="0.82"><title>PKG / Cluster 0</title></circle>
-<circle cx="750.0" cy="397.9" r="4.8" fill="#2563eb" opacity="0.82"><title>PKI / Cluster 0</title></circle>
-<circle cx="658.3" cy="476.7" r="4.8" fill="#2563eb" opacity="0.82"><title>PLD / Cluster 0</title></circle>
-<circle cx="535.9" cy="530.7" r="4.8" fill="#dc2626" opacity="0.82"><title>PM / Cluster 1</title></circle>
-<circle cx="708.9" cy="406.7" r="4.8" fill="#2563eb" opacity="0.82"><title>PNC / Cluster 0</title></circle>
-<circle cx="669.5" cy="428.4" r="4.8" fill="#2563eb" opacity="0.82"><title>PNR / Cluster 0</title></circle>
-<circle cx="555.8" cy="560.0" r="4.8" fill="#dc2626" opacity="0.82"><title>PNW / Cluster 1</title></circle>
-<circle cx="667.2" cy="447.3" r="4.8" fill="#2563eb" opacity="0.82"><title>PPG / Cluster 0</title></circle>
-<circle cx="483.0" cy="575.0" r="4.8" fill="#be123c" opacity="0.82"><title>PPL / Cluster 6</title></circle>
-<circle cx="581.4" cy="234.5" r="4.8" fill="#9333ea" opacity="0.82"><title>PRGO / Cluster 3</title></circle>
-<circle cx="606.5" cy="467.5" r="4.8" fill="#dc2626" opacity="0.82"><title>PRU / Cluster 1</title></circle>
-<circle cx="517.3" cy="509.4" r="4.8" fill="#be123c" opacity="0.82"><title>PSA / Cluster 6</title></circle>
-<circle cx="694.3" cy="438.2" r="4.8" fill="#2563eb" opacity="0.82"><title>PSX / Cluster 0</title></circle>
-<circle cx="810.4" cy="334.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>PVH / Cluster 7</title></circle>
-<circle cx="521.3" cy="459.8" r="4.8" fill="#be123c" opacity="0.82"><title>PWR / Cluster 6</title></circle>
-<circle cx="725.5" cy="424.0" r="4.8" fill="#2563eb" opacity="0.82"><title>PX / Cluster 0</title></circle>
-<circle cx="492.4" cy="262.1" r="4.8" fill="#9333ea" opacity="0.82"><title>PXD / Cluster 3</title></circle>
-<circle cx="804.2" cy="265.8" r="4.8" fill="#4f46e5" opacity="0.82"><title>PYPL / Cluster 7</title></circle>
-<text x="810.2" y="261.8" font-size="10" fill="#0f172a">PYPL</text>
-<circle cx="653.9" cy="328.7" r="4.8" fill="#16a34a" opacity="0.82"><title>QCOM / Cluster 2</title></circle>
-<circle cx="562.0" cy="296.9" r="4.8" fill="#16a34a" opacity="0.82"><title>QRVO / Cluster 2</title></circle>
-<circle cx="692.1" cy="404.6" r="4.8" fill="#2563eb" opacity="0.82"><title>RCL / Cluster 0</title></circle>
-<circle cx="528.3" cy="444.6" r="4.8" fill="#be123c" opacity="0.82"><title>RE / Cluster 6</title></circle>
-<circle cx="491.2" cy="518.6" r="4.8" fill="#be123c" opacity="0.82"><title>REG / Cluster 6</title></circle>
-<circle cx="346.5" cy="438.5" r="4.8" fill="#0891b2" opacity="0.82"><title>REGN / Cluster 5</title></circle>
-<circle cx="690.9" cy="318.9" r="4.8" fill="#16a34a" opacity="0.82"><title>RF / Cluster 2</title></circle>
-<circle cx="689.7" cy="346.6" r="4.8" fill="#16a34a" opacity="0.82"><title>RHI / Cluster 2</title></circle>
-<circle cx="820.6" cy="307.9" r="4.8" fill="#4f46e5" opacity="0.82"><title>RHT / Cluster 7</title></circle>
-<text x="826.6" y="303.9" font-size="10" fill="#0f172a">RHT</text>
-<circle cx="661.0" cy="416.6" r="4.8" fill="#2563eb" opacity="0.82"><title>RJF / Cluster 0</title></circle>
-<circle cx="649.9" cy="279.6" r="4.8" fill="#16a34a" opacity="0.82"><title>RL / Cluster 2</title></circle>
-<circle cx="712.1" cy="328.5" r="4.8" fill="#4f46e5" opacity="0.82"><title>RMD / Cluster 7</title></circle>
-<circle cx="692.0" cy="406.1" r="4.8" fill="#2563eb" opacity="0.82"><title>ROK / Cluster 0</title></circle>
-<circle cx="755.1" cy="436.4" r="4.8" fill="#2563eb" opacity="0.82"><title>ROP / Cluster 0</title></circle>
-<circle cx="642.5" cy="275.8" r="4.8" fill="#16a34a" opacity="0.82"><title>ROST / Cluster 2</title></circle>
-<circle cx="160.8" cy="332.8" r="4.8" fill="#0891b2" opacity="0.82"><title>RRC / Cluster 5</title></circle>
-<circle cx="680.8" cy="521.0" r="4.8" fill="#dc2626" opacity="0.82"><title>RSG / Cluster 1</title></circle>
-<circle cx="764.8" cy="445.6" r="4.8" fill="#2563eb" opacity="0.82"><title>RTN / Cluster 0</title></circle>
-<circle cx="773.8" cy="363.0" r="4.8" fill="#4f46e5" opacity="0.82"><title>SBAC / Cluster 7</title></circle>
-<circle cx="577.4" cy="472.8" r="4.8" fill="#dc2626" opacity="0.82"><title>SBUX / Cluster 1</title></circle>
-<circle cx="166.2" cy="402.8" r="4.8" fill="#0891b2" opacity="0.82"><title>SCG / Cluster 5</title></circle>
-<circle cx="696.2" cy="339.3" r="4.8" fill="#16a34a" opacity="0.82"><title>SCHW / Cluster 2</title></circle>
-<circle cx="549.8" cy="481.5" r="4.8" fill="#dc2626" opacity="0.82"><title>SEE / Cluster 1</title></circle>
-<circle cx="743.1" cy="410.8" r="4.8" fill="#2563eb" opacity="0.82"><title>SHW / Cluster 0</title></circle>
-<circle cx="233.9" cy="281.7" r="4.8" fill="#0891b2" opacity="0.82"><title>SIG / Cluster 5</title></circle>
-<circle cx="469.9" cy="436.7" r="4.8" fill="#be123c" opacity="0.82"><title>SJM / Cluster 6</title></circle>
-<circle cx="514.3" cy="433.3" r="4.8" fill="#be123c" opacity="0.82"><title>SLB / Cluster 6</title></circle>
-<circle cx="527.5" cy="517.6" r="4.8" fill="#dc2626" opacity="0.82"><title>SLG / Cluster 1</title></circle>
-<circle cx="582.0" cy="438.3" r="4.8" fill="#dc2626" opacity="0.82"><title>SNA / Cluster 1</title></circle>
-<circle cx="574.5" cy="413.2" r="4.8" fill="#16a34a" opacity="0.82"><title>SNI / Cluster 2</title></circle>
-<circle cx="727.6" cy="436.2" r="4.8" fill="#2563eb" opacity="0.82"><title>SNPS / Cluster 0</title></circle>
-<circle cx="545.6" cy="554.7" r="4.8" fill="#dc2626" opacity="0.82"><title>SO / Cluster 1</title></circle>
-<circle cx="522.6" cy="485.4" r="4.8" fill="#be123c" opacity="0.82"><title>SPG / Cluster 6</title></circle>
-<circle cx="766.0" cy="382.8" r="4.8" fill="#4f46e5" opacity="0.82"><title>SPGI / Cluster 7</title></circle>
-<circle cx="487.8" cy="424.6" r="4.8" fill="#be123c" opacity="0.82"><title>SRCL / Cluster 6</title></circle>
-<circle cx="581.4" cy="539.3" r="4.8" fill="#dc2626" opacity="0.82"><title>SRE / Cluster 1</title></circle>
-<circle cx="671.3" cy="378.8" r="4.8" fill="#16a34a" opacity="0.82"><title>STI / Cluster 2</title></circle>
-<circle cx="714.5" cy="428.6" r="4.8" fill="#2563eb" opacity="0.82"><title>STT / Cluster 0</title></circle>
-<circle cx="510.3" cy="110.5" r="4.8" fill="#9333ea" opacity="0.82"><title>STX / Cluster 3</title></circle>
-<circle cx="735.5" cy="435.0" r="4.8" fill="#2563eb" opacity="0.82"><title>STZ / Cluster 0</title></circle>
-<circle cx="724.5" cy="435.8" r="4.8" fill="#2563eb" opacity="0.82"><title>SWK / Cluster 0</title></circle>
-<circle cx="540.0" cy="397.9" r="4.8" fill="#be123c" opacity="0.82"><title>SWKS / Cluster 6</title></circle>
-<circle cx="540.7" cy="294.9" r="4.8" fill="#9333ea" opacity="0.82"><title>SYF / Cluster 3</title></circle>
-<circle cx="694.9" cy="459.6" r="4.8" fill="#2563eb" opacity="0.82"><title>SYK / Cluster 0</title></circle>
-<circle cx="493.1" cy="443.2" r="4.8" fill="#be123c" opacity="0.82"><title>SYMC / Cluster 6</title></circle>
-<circle cx="666.6" cy="431.5" r="4.8" fill="#2563eb" opacity="0.82"><title>SYY / Cluster 0</title></circle>
-<circle cx="517.5" cy="476.6" r="4.8" fill="#be123c" opacity="0.82"><title>T / Cluster 6</title></circle>
-<circle cx="464.2" cy="529.4" r="4.8" fill="#be123c" opacity="0.82"><title>TAP / Cluster 6</title></circle>
-<circle cx="601.7" cy="398.4" r="4.8" fill="#16a34a" opacity="0.82"><title>TDG / Cluster 2</title></circle>
-<circle cx="765.7" cy="412.1" r="4.8" fill="#2563eb" opacity="0.82"><title>TEL / Cluster 0</title></circle>
-<circle cx="569.6" cy="264.7" r="4.8" fill="#9333ea" opacity="0.82"><title>TGT / Cluster 3</title></circle>
-<circle cx="683.0" cy="387.2" r="4.8" fill="#2563eb" opacity="0.82"><title>TIF / Cluster 0</title></circle>
-<circle cx="598.9" cy="451.9" r="4.8" fill="#dc2626" opacity="0.82"><title>TJX / Cluster 1</title></circle>
-<circle cx="676.5" cy="499.8" r="4.8" fill="#2563eb" opacity="0.82"><title>TMK / Cluster 0</title></circle>
-<circle cx="741.8" cy="398.4" r="4.8" fill="#2563eb" opacity="0.82"><title>TMO / Cluster 0</title></circle>
-<circle cx="597.3" cy="340.3" r="4.8" fill="#16a34a" opacity="0.82"><title>TPR / Cluster 2</title></circle>
-<circle cx="290.7" cy="243.1" r="4.8" fill="#0891b2" opacity="0.82"><title>TRIP / Cluster 5</title></circle>
-<circle cx="784.8" cy="331.9" r="4.8" fill="#4f46e5" opacity="0.82"><title>TROW / Cluster 7</title></circle>
-<circle cx="686.4" cy="458.2" r="4.8" fill="#2563eb" opacity="0.82"><title>TRV / Cluster 0</title></circle>
-<circle cx="491.5" cy="309.2" r="4.8" fill="#9333ea" opacity="0.82"><title>TSCO / Cluster 3</title></circle>
-<circle cx="654.6" cy="417.8" r="4.8" fill="#2563eb" opacity="0.82"><title>TSN / Cluster 0</title></circle>
-<circle cx="831.8" cy="337.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>TSS / Cluster 7</title></circle>
-<circle cx="589.3" cy="535.5" r="4.8" fill="#dc2626" opacity="0.82"><title>TWX / Cluster 1</title></circle>
-<circle cx="706.7" cy="351.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>TXN / Cluster 7</title></circle>
-<circle cx="708.1" cy="416.9" r="4.8" fill="#2563eb" opacity="0.82"><title>TXT / Cluster 0</title></circle>
-<circle cx="152.3" cy="326.5" r="4.8" fill="#0891b2" opacity="0.82"><title>UA / Cluster 5</title></circle>
-<circle cx="142.3" cy="332.9" r="4.8" fill="#0891b2" opacity="0.82"><title>UAA / Cluster 5</title></circle>
-<circle cx="421.9" cy="352.6" r="4.8" fill="#be123c" opacity="0.82"><title>UAL / Cluster 6</title></circle>
-<circle cx="558.9" cy="546.8" r="4.8" fill="#dc2626" opacity="0.82"><title>UDR / Cluster 1</title></circle>
-<circle cx="550.3" cy="389.5" r="4.8" fill="#16a34a" opacity="0.82"><title>UHS / Cluster 2</title></circle>
-<circle cx="339.4" cy="398.7" r="4.8" fill="#0891b2" opacity="0.82"><title>ULTA / Cluster 5</title></circle>
-<circle cx="735.6" cy="403.8" r="4.8" fill="#2563eb" opacity="0.82"><title>UNH / Cluster 0</title></circle>
-<circle cx="613.2" cy="475.2" r="4.8" fill="#dc2626" opacity="0.82"><title>UNM / Cluster 1</title></circle>
-<circle cx="694.5" cy="377.0" r="4.8" fill="#16a34a" opacity="0.82"><title>UNP / Cluster 2</title></circle>
-<circle cx="600.3" cy="481.5" r="4.8" fill="#dc2626" opacity="0.82"><title>UPS / Cluster 1</title></circle>
-<circle cx="694.8" cy="184.5" r="4.8" fill="#ea580c" opacity="0.82"><title>URI / Cluster 4</title></circle>
-<circle cx="637.5" cy="498.7" r="4.8" fill="#dc2626" opacity="0.82"><title>USB / Cluster 1</title></circle>
-<circle cx="692.9" cy="450.1" r="4.8" fill="#2563eb" opacity="0.82"><title>UTX / Cluster 0</title></circle>
-<circle cx="771.2" cy="423.7" r="4.8" fill="#2563eb" opacity="0.82"><title>V / Cluster 0</title></circle>
-<circle cx="754.1" cy="356.1" r="4.8" fill="#4f46e5" opacity="0.82"><title>VAR / Cluster 7</title></circle>
-<circle cx="805.5" cy="321.6" r="4.8" fill="#4f46e5" opacity="0.82"><title>VFC / Cluster 7</title></circle>
-<text x="811.5" y="317.6" font-size="10" fill="#0f172a">VFC</text>
-<circle cx="269.7" cy="279.4" r="4.8" fill="#0891b2" opacity="0.82"><title>VIAB / Cluster 5</title></circle>
-<circle cx="761.1" cy="345.7" r="4.8" fill="#4f46e5" opacity="0.82"><title>VLO / Cluster 7</title></circle>
-<circle cx="592.0" cy="395.6" r="4.8" fill="#16a34a" opacity="0.82"><title>VMC / Cluster 2</title></circle>
-<circle cx="327.2" cy="445.8" r="4.8" fill="#0891b2" opacity="0.82"><title>VNO / Cluster 5</title></circle>
-<circle cx="691.8" cy="442.4" r="4.8" fill="#2563eb" opacity="0.82"><title>VRSK / Cluster 0</title></circle>
-<circle cx="733.5" cy="458.4" r="4.8" fill="#2563eb" opacity="0.82"><title>VRSN / Cluster 0</title></circle>
-<circle cx="641.9" cy="226.6" r="4.8" fill="#ea580c" opacity="0.82"><title>VRTX / Cluster 4</title></circle>
-<circle cx="464.5" cy="538.0" r="4.8" fill="#be123c" opacity="0.82"><title>VTR / Cluster 6</title></circle>
-<circle cx="615.3" cy="455.4" r="4.8" fill="#dc2626" opacity="0.82"><title>VZ / Cluster 1</title></circle>
-<circle cx="741.1" cy="418.8" r="4.8" fill="#2563eb" opacity="0.82"><title>WAT / Cluster 0</title></circle>
-<circle cx="466.7" cy="480.5" r="4.8" fill="#be123c" opacity="0.82"><title>WBA / Cluster 6</title></circle>
-<circle cx="540.5" cy="360.6" r="4.8" fill="#16a34a" opacity="0.82"><title>WDC / Cluster 2</title></circle>
-<circle cx="612.3" cy="542.9" r="4.8" fill="#dc2626" opacity="0.82"><title>WEC / Cluster 1</title></circle>
-<circle cx="602.4" cy="431.9" r="4.8" fill="#dc2626" opacity="0.82"><title>WFC / Cluster 1</title></circle>
-<circle cx="544.2" cy="445.7" r="4.8" fill="#be123c" opacity="0.82"><title>WHR / Cluster 6</title></circle>
-<circle cx="699.2" cy="466.3" r="4.8" fill="#2563eb" opacity="0.82"><title>WLTW / Cluster 0</title></circle>
-<circle cx="700.2" cy="486.0" r="4.8" fill="#2563eb" opacity="0.82"><title>WM / Cluster 0</title></circle>
-<circle cx="586.1" cy="461.7" r="4.8" fill="#dc2626" opacity="0.82"><title>WMB / Cluster 1</title></circle>
-<circle cx="784.0" cy="350.1" r="4.8" fill="#4f46e5" opacity="0.82"><title>WMT / Cluster 7</title></circle>
-<circle cx="679.4" cy="404.6" r="4.8" fill="#2563eb" opacity="0.82"><title>WRK / Cluster 0</title></circle>
-<circle cx="611.9" cy="483.8" r="4.8" fill="#dc2626" opacity="0.82"><title>WU / Cluster 1</title></circle>
-<circle cx="649.4" cy="475.3" r="4.8" fill="#dc2626" opacity="0.82"><title>WY / Cluster 1</title></circle>
-<circle cx="747.0" cy="365.4" r="4.8" fill="#4f46e5" opacity="0.82"><title>WYN / Cluster 7</title></circle>
-<circle cx="759.1" cy="163.4" r="4.8" fill="#ea580c" opacity="0.82"><title>WYNN / Cluster 4</title></circle>
-<text x="765.1" y="159.4" font-size="10" fill="#0f172a">WYNN</text>
-<circle cx="440.8" cy="380.5" r="4.8" fill="#be123c" opacity="0.82"><title>XEC / Cluster 6</title></circle>
-<circle cx="579.2" cy="554.4" r="4.8" fill="#dc2626" opacity="0.82"><title>XEL / Cluster 1</title></circle>
-<circle cx="496.2" cy="406.4" r="4.8" fill="#be123c" opacity="0.82"><title>XL / Cluster 6</title></circle>
-<circle cx="624.8" cy="405.9" r="4.8" fill="#16a34a" opacity="0.82"><title>XLNX / Cluster 2</title></circle>
-<circle cx="596.1" cy="530.0" r="4.8" fill="#dc2626" opacity="0.82"><title>XOM / Cluster 1</title></circle>
-<circle cx="564.4" cy="429.6" r="4.8" fill="#dc2626" opacity="0.82"><title>XRAY / Cluster 1</title></circle>
-<circle cx="565.6" cy="449.2" r="4.8" fill="#dc2626" opacity="0.82"><title>XRX / Cluster 1</title></circle>
-<circle cx="796.1" cy="387.5" r="4.8" fill="#4f46e5" opacity="0.82"><title>XYL / Cluster 7</title></circle>
-<circle cx="700.8" cy="479.1" r="4.8" fill="#2563eb" opacity="0.82"><title>YUM / Cluster 0</title></circle>
-<circle cx="592.3" cy="436.5" r="4.8" fill="#dc2626" opacity="0.82"><title>ZBH / Cluster 1</title></circle>
-<circle cx="667.2" cy="354.4" r="4.8" fill="#16a34a" opacity="0.82"><title>ZION / Cluster 2</title></circle>
-<circle cx="748.6" cy="408.0" r="4.8" fill="#2563eb" opacity="0.82"><title>ZTS / Cluster 0</title></circle>
-<text x="500" y="635" text-anchor="middle" font-size="13">PC1</text><text x="24" y="340" transform="rotate(-90 24,340)" text-anchor="middle" font-size="13">PC2</text>
+<title>PCA cluster scatter</title>
+<line x1="50" y1="570" x2="850" y2="570" stroke="#64748b" stroke-width="1"/>
+<line x1="50" y1="50" x2="50" y2="570" stroke="#64748b" stroke-width="1"/>
+<text x="60" y="35" font-size="22" font-family="Arial" fill="#0f172a">PCA cluster scatter</text>
+<circle cx="133.17" cy="503.81" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="50.00" cy="405.83" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="58.78" cy="262.34" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="229.54" cy="347.92" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="475.07" cy="498.62" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="464.05" cy="495.44" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="492.55" cy="492.51" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="413.25" cy="516.03" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="490.16" cy="522.83" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="514.71" cy="493.75" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="498.66" cy="413.24" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="476.21" cy="465.14" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="439.70" cy="387.93" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="463.97" cy="269.93" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="439.21" cy="236.70" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="403.47" cy="354.74" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="428.23" cy="375.98" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="479.72" cy="510.69" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="547.50" cy="480.68" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="420.14" cy="439.53" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="372.90" cy="171.01" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="366.71" cy="50.00" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="382.38" cy="288.00" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="457.97" cy="474.70" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="386.13" cy="505.59" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="317.15" cy="570.00" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="262.49" cy="438.78" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="327.86" cy="211.50" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="355.02" cy="276.42" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="315.71" cy="430.92" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="272.82" cy="494.17" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="259.17" cy="400.61" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="244.41" cy="310.91" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="250.45" cy="273.02" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="269.51" cy="290.78" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="276.73" cy="400.16" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="233.43" cy="543.28" r="5" fill="rgb(37,99,235)" opacity="0.86"/>
+<circle cx="306.97" cy="531.82" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="425.70" cy="459.17" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="664.42" cy="380.41" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="674.95" cy="248.89" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="625.11" cy="279.55" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="556.13" cy="234.20" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="529.22" cy="225.86" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="496.88" cy="309.02" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="476.21" cy="170.87" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="470.51" cy="212.14" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="481.04" cy="179.69" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="536.75" cy="289.72" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="553.54" cy="442.29" r="5" fill="rgb(220,38,38)" opacity="0.86"/>
+<circle cx="584.18" cy="405.64" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="628.92" cy="398.17" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="698.44" cy="280.52" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="762.00" cy="245.63" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="646.07" cy="264.44" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="691.89" cy="314.61" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="667.64" cy="316.54" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="603.91" cy="235.59" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="532.46" cy="219.70" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="524.80" cy="250.69" r="5" fill="rgb(22,163,74)" opacity="0.86"/>
+<circle cx="666.96" cy="398.42" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="703.06" cy="378.23" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="642.38" cy="385.05" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="700.46" cy="440.95" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="752.78" cy="494.63" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="850.00" cy="528.78" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="735.45" cy="536.80" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="622.31" cy="486.56" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
+<circle cx="683.35" cy="498.56" r="5" fill="rgb(147,51,234)" opacity="0.86"/>
 </svg>
