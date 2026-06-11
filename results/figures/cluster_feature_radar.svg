@@ -1,19 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="520" viewBox="0 0 700 520">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" role="img" aria-label="Cluster core-feature radar chart">
 <rect width="100%" height="100%" fill="white"/>
-<text x="350" y="36" text-anchor="middle" font-size="22" font-weight="700">聚类画像雷达图（展示版）</text>
-<line x1="350" y1="270" x2="520.0" y2="270.0" stroke="#cbd5e1"/><text x="520.0" y="270.0" font-size="13">收益</text>
-<line x1="350" y1="270" x2="350.0" y2="440.0" stroke="#cbd5e1"/><text x="350.0" y="440.0" font-size="13">波动</text>
-<line x1="350" y1="270" x2="180.0" y2="270.0" stroke="#cbd5e1"/><text x="180.0" y="270.0" font-size="13">动量</text>
-<line x1="350" y1="270" x2="350.0" y2="100.0" stroke="#cbd5e1"/><text x="350.0" y="100.0" font-size="13">回撤</text>
-<circle cx="350" cy="270" r="56.1" fill="none" stroke="#e2e8f0"/>
-<circle cx="350" cy="270" r="112.2" fill="none" stroke="#e2e8f0"/>
-<circle cx="350" cy="270" r="170.0" fill="none" stroke="#e2e8f0"/>
-<polygon points="464.3,270.0 350.0,308.9 236.2,270.0 350.0,100.0" fill="#2563eb" opacity="0.08" stroke="#2563eb" stroke-width="1.6"><title>低波动稳健型</title></polygon>
-<polygon points="429.2,270.0 350.0,305.0 275.6,270.0 350.0,121.9" fill="#dc2626" opacity="0.08" stroke="#dc2626" stroke-width="1.6"><title>低波动承压型</title></polygon>
-<polygon points="454.5,270.0 350.0,352.2 226.3,270.0 350.0,129.2" fill="#16a34a" opacity="0.08" stroke="#16a34a" stroke-width="1.6"><title>均衡核心型</title></polygon>
-<polygon points="423.0,270.0 350.0,409.9 198.3,270.0 350.0,191.6" fill="#9333ea" opacity="0.08" stroke="#9333ea" stroke-width="1.6"><title>高波动修复型</title></polygon>
-<polygon points="520.0,270.0 350.0,423.0 180.0,270.0 350.0,132.2" fill="#ea580c" opacity="0.08" stroke="#ea580c" stroke-width="1.6"><title>高收益高波动动量型</title></polygon>
-<polygon points="385.0,270.0 350.0,440.0 315.0,270.0 350.0,235.0" fill="#0891b2" opacity="0.08" stroke="#0891b2" stroke-width="1.6"><title>高风险下行型</title></polygon>
-<polygon points="414.6,270.0 350.0,348.5 287.6,270.0 350.0,155.5" fill="#be123c" opacity="0.08" stroke="#be123c" stroke-width="1.6"><title>弱动量承压型</title></polygon>
-<polygon points="498.4,270.0 350.0,327.5 189.4,270.0 350.0,104.4" fill="#4f46e5" opacity="0.08" stroke="#4f46e5" stroke-width="1.6"><title>高收益稳健动量型</title></polygon>
+<title>Cluster core-feature radar chart</title>
+<text x="50" y="38" font-size="22" font-family="Arial" fill="#0f172a">Cluster core-feature radar chart</text>
+<polygon points="450.00,328.00 495.03,354.00 495.03,406.00 450.00,432.00 404.97,406.00 404.97,354.00" fill="none" stroke="#e2e8f0"/>
+<polygon points="450.00,276.00 540.07,328.00 540.07,432.00 450.00,484.00 359.93,432.00 359.93,328.00" fill="none" stroke="#e2e8f0"/>
+<polygon points="450.00,224.00 585.10,302.00 585.10,458.00 450.00,536.00 314.90,458.00 314.90,302.00" fill="none" stroke="#e2e8f0"/>
+<polygon points="450.00,172.00 630.13,276.00 630.13,484.00 450.00,588.00 269.87,484.00 269.87,276.00" fill="none" stroke="#e2e8f0"/>
+<polygon points="450.00,120.00 675.17,250.00 675.17,510.00 450.00,640.00 224.83,510.00 224.83,250.00" fill="none" stroke="#e2e8f0"/>
+<line x1="450" y1="380" x2="450.00" y2="120.00" stroke="#cbd5e1"/>
+<text x="450.00" y="96.00" font-size="12" font-family="Arial" fill="#334155" text-anchor="middle">收益</text>
+<line x1="450" y1="380" x2="675.17" y2="250.00" stroke="#cbd5e1"/>
+<text x="695.95" y="238.00" font-size="12" font-family="Arial" fill="#334155" text-anchor="middle">波动</text>
+<line x1="450" y1="380" x2="675.17" y2="510.00" stroke="#cbd5e1"/>
+<text x="695.95" y="522.00" font-size="12" font-family="Arial" fill="#334155" text-anchor="middle">相关</text>
+<line x1="450" y1="380" x2="450.00" y2="640.00" stroke="#cbd5e1"/>
+<text x="450.00" y="664.00" font-size="12" font-family="Arial" fill="#334155" text-anchor="middle">网络</text>
+<line x1="450" y1="380" x2="224.83" y2="510.00" stroke="#cbd5e1"/>
+<text x="204.05" y="522.00" font-size="12" font-family="Arial" fill="#334155" text-anchor="middle">行业集中</text>
+<line x1="450" y1="380" x2="224.83" y2="250.00" stroke="#cbd5e1"/>
+<text x="204.05" y="238.00" font-size="12" font-family="Arial" fill="#334155" text-anchor="middle">科技超额</text>
+<polygon points="450.00,295.50 675.17,250.00 675.17,510.00 450.00,640.00 374.44,423.63 416.23,360.50" fill="rgb(37,99,235)" opacity="0.10" stroke="rgb(37,99,235)" stroke-width="2"/>
+<rect x="60" y="92" width="12" height="12" fill="rgb(37,99,235)"/>
+<text x="80" y="103" font-size="12" font-family="Arial" fill="#334155">Regime A：危机共振状态</text>
+<polygon points="450.00,341.00 549.52,322.54 565.18,446.50 450.00,575.90 375.93,422.77 327.26,309.14" fill="rgb(220,38,38)" opacity="0.10" stroke="rgb(220,38,38)" stroke-width="2"/>
+<rect x="60" y="116" width="12" height="12" fill="rgb(220,38,38)"/>
+<text x="80" y="127" font-size="12" font-family="Arial" fill="#334155">Regime B：高波动调整期</text>
+<polygon points="450.00,120.00 544.90,325.21 570.87,449.78 450.00,584.20 416.23,399.50 227.68,251.64" fill="rgb(22,163,74)" opacity="0.10" stroke="rgb(22,163,74)" stroke-width="2"/>
+<rect x="60" y="140" width="12" height="12" fill="rgb(22,163,74)"/>
+<text x="80" y="151" font-size="12" font-family="Arial" fill="#334155">Regime C：科技成长驱动阶段</text>
+<polygon points="450.00,266.04 483.77,360.50 483.77,399.50 450.00,419.00 224.83,510.00 224.83,250.00" fill="rgb(147,51,234)" opacity="0.10" stroke="rgb(147,51,234)" stroke-width="2"/>
+<rect x="60" y="164" width="12" height="12" fill="rgb(147,51,234)"/>
+<text x="80" y="175" font-size="12" font-family="Arial" fill="#334155">Regime D：低波动科技牛市</text>
 </svg>

@@ -1,19 +1,37 @@
-# Raw data
+# data/raw 原始数据目录
 
-`src/dynamic_market_regime.py` expects an optional raw price panel at:
+本目录用于存放未清洗的原始价格面板。为避免仓库体积过大和外部数据授权问题，真实大型原始数据默认不提交到 Git。
+
+## 预期文件
 
 ```text
 data/raw/sp500_prices.csv
 ```
 
-Required columns:
+## 字段要求
 
-```text
+| 字段 | 类型 | 是否必需 | 说明 |
+| --- | --- | --- | --- |
+| `date` | 日期 | 是 | 交易日期，格式 `YYYY-MM-DD`。 |
+| `ticker` | 字符串 | 是 | 股票代码，脚本会统一转为大写。 |
+| `sector` | 字符串 | 是 | 行业分类，建议使用 GICS 一级行业；缺失时可暂填 `Unknown`。 |
+| `close` | 数值 | 是 | 收盘价或复权收盘价，必须为正数。正式研究建议使用复权收盘价。 |
+
+示例：
+
+```csv
 date,ticker,sector,close
+2023-01-03,AAPL,Information Technology,124.37
+2023-01-03,MSFT,Information Technology,239.58
 ```
 
-If this file is absent, the script creates a deterministic S&P-500-like panel for 2020-01-01 to 2025-06-30 so the full project remains reproducible without external API keys. To use real data, replace `sp500_prices.csv` with adjusted close prices and rerun:
+## 数据范围建议
 
-```bash
-python src/dynamic_market_regime.py
-```
+- 股票池：标普500成分股或课程指定股票池。
+- 时间范围：默认实验为 2020-01-01 至 2025-06-30；如使用更长历史，应在 README 中同步更新。
+- 频率：日频。
+- 价格：优先使用复权收盘价，减少拆股和分红带来的异常跳变。
+
+## 当前仓库策略
+
+如果 `sp500_prices.csv` 不存在，主脚本 `src/dynamic_market_regime.py` 会自动生成可复现模拟数据用于课程展示。该兜底数据用于验证流程和展示方法，不应被表述为真实金融结论。

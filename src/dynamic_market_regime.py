@@ -493,6 +493,139 @@ def bar_compare_svg(profiles, path: Path) -> None:
             elements.append(f'<rect x="{x + ri * 18}" y="{y0:.2f}" width="14" height="{height:.2f}" fill="{color}" opacity="0.84"/>')
     save_svg(path, w, h, elements, 'Key period structure comparison')
 
+
+
+def inertia_score(data, labels, centroids) -> float:
+    """Return within-cluster sum of squared errors for elbow-method comparison."""
+    return sum(sqdist(point, centroids[label]) for point, label in zip(data, labels))
+
+
+def k_metrics_svg(metrics, path: Path) -> None:
+    """Draw a compact K-value metric comparison chart from the model-selection table."""
+    w, h = 1050, 680
+    algos = sorted({row['algorithm'] for row in metrics})
+    ks = sorted({int(row['k']) for row in metrics})
+    # Normalize each metric to [0, 1] for a shared visual scale; DBI is inverted
+    # because smaller values are better.
+    raw = {
+        'Silhouette ↑': [float(r['silhouette']) for r in metrics],
+        'DBI ↓': [float(r['davies_bouldin']) for r in metrics],
+        'CH ↑': [float(r['calinski_harabasz']) for r in metrics],
+        'SSE ↓': [float(r['sse_inertia']) for r in metrics],
+    }
+    ranges = {m: (min(vals), max(vals)) for m, vals in raw.items()}
+
+    def norm(metric: str, value: float) -> float:
+        lo, hi = ranges[metric]
+        scaled = (value - lo) / (hi - lo or 1.0)
+        return 1.0 - scaled if '↓' in metric else scaled
+
+    metric_order = ['Silhouette ↑', 'DBI ↓', 'CH ↑', 'SSE ↓']
+    elements = [
+        '<text x="45" y="36" font-size="22" font-family="Arial" fill="#0f172a">K-value clustering metrics comparison</text>',
+        '<text x="45" y="62" font-size="12" font-family="Arial" fill="#475569">Values are normalized for display; arrows indicate preferred direction.</text>',
+    ]
+    chart_w, chart_h = 440, 245
+    for mi, metric in enumerate(metric_order):
+        ox = 55 + (mi % 2) * 500
+        oy = 105 + (mi // 2) * 285
+        elements.extend([
+            f'<text x="{ox}" y="{oy-18}" font-size="16" font-family="Arial" fill="#0f172a">{metric}</text>',
+            f'<line x1="{ox}" y1="{oy+chart_h}" x2="{ox+chart_w}" y2="{oy+chart_h}" stroke="#94a3b8"/>',
+            f'<line x1="{ox}" y1="{oy}" x2="{ox}" y2="{oy+chart_h}" stroke="#94a3b8"/>',
+        ])
+        for k in ks:
+            x = ox + (k - min(ks)) / max(1, max(ks) - min(ks)) * chart_w
+            elements.append(f'<text x="{x-6:.2f}" y="{oy+chart_h+20}" font-size="10" font-family="Arial" fill="#64748b">{k}</text>')
+        for ai, algo in enumerate(algos):
+            pts = []
+            for k in ks:
+                row = next(r for r in metrics if r['algorithm'] == algo and int(r['k']) == k)
+                field = {'Silhouette ↑':'silhouette','DBI ↓':'davies_bouldin','CH ↑':'calinski_harabasz','SSE ↓':'sse_inertia'}[metric]
+                x = ox + (k - min(ks)) / max(1, max(ks) - min(ks)) * chart_w
+                y = oy + chart_h - norm(metric, float(row[field])) * chart_h
+                pts.append((x, y))
+            color = svg_color(PALETTE[ai % len(PALETTE)])
+            d = ' '.join(f'{x:.2f},{y:.2f}' for x, y in pts)
+            elements.append(f'<polyline points="{d}" fill="none" stroke="{color}" stroke-width="2" opacity="0.88"/>')
+            for x, y in pts:
+                elements.append(f'<circle cx="{x:.2f}" cy="{y:.2f}" r="3" fill="{color}"/>')
+    for ai, algo in enumerate(algos):
+        y = 635 + (ai // 3) * 18
+        x = 55 + (ai % 3) * 250
+        color = svg_color(PALETTE[ai % len(PALETTE)])
+        elements.append(f'<rect x="{x}" y="{y-10}" width="12" height="12" fill="{color}"/>')
+        elements.append(f'<text x="{x+18}" y="{y}" font-size="12" font-family="Arial" fill="#334155">{algo}</text>')
+    save_svg(path, w, h, elements, 'K-value clustering metrics comparison')
+
+
+def radar_svg(profiles, path: Path) -> None:
+    """Draw a radar chart of standardized core feature averages for each regime."""
+    w, h = 900, 760
+    cx, cy, radius = 450, 380, 260
+    cols = ['mean_return', 'market_volatility', 'mean_correlation', 'network_density', 'sector_concentration', 'technology_minus_market']
+    labels_cn = ['收益', '波动', '相关', '网络', '行业集中', '科技超额']
+    labs = sorted(profiles)
+    mins = {c: min(profiles[lab][1][c] for lab in labs) for c in cols}
+    maxs = {c: max(profiles[lab][1][c] for lab in labs) for c in cols}
+    elements = ['<text x="50" y="38" font-size="22" font-family="Arial" fill="#0f172a">Cluster core-feature radar chart</text>']
+    for ring in range(1, 6):
+        r = radius * ring / 5
+        pts = []
+        for i in range(len(cols)):
+            ang = -math.pi / 2 + 2 * math.pi * i / len(cols)
+            pts.append((cx + r * math.cos(ang), cy + r * math.sin(ang)))
+        elements.append('<polygon points="{}" fill="none" stroke="#e2e8f0"/>'.format(' '.join(f'{x:.2f},{y:.2f}' for x,y in pts)))
+    for i, label in enumerate(labels_cn):
+        ang = -math.pi / 2 + 2 * math.pi * i / len(cols)
+        x2, y2 = cx + radius * math.cos(ang), cy + radius * math.sin(ang)
+        elements.append(f'<line x1="{cx}" y1="{cy}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="#cbd5e1"/>')
+        elements.append(f'<text x="{cx + (radius+24)*math.cos(ang):.2f}" y="{cy + (radius+24)*math.sin(ang):.2f}" font-size="12" font-family="Arial" fill="#334155" text-anchor="middle">{label}</text>')
+    for li, lab in enumerate(labs):
+        pts=[]
+        for i, col in enumerate(cols):
+            val = (profiles[lab][1][col] - mins[col]) / (maxs[col] - mins[col] or 1.0)
+            r = radius * (0.15 + 0.85 * val)
+            ang = -math.pi / 2 + 2 * math.pi * i / len(cols)
+            pts.append((cx + r * math.cos(ang), cy + r * math.sin(ang)))
+        color = svg_color(PALETTE[lab % len(PALETTE)])
+        elements.append('<polygon points="{}" fill="{}" opacity="0.10" stroke="{}" stroke-width="2"/>'.format(' '.join(f'{x:.2f},{y:.2f}' for x,y in pts), color, color))
+        elements.append(f'<rect x="60" y="{92 + li*24}" width="12" height="12" fill="{color}"/>')
+        elements.append(f'<text x="80" y="{103 + li*24}" font-size="12" font-family="Arial" fill="#334155">{profiles[lab][0]}</text>')
+    save_svg(path, w, h, elements, 'Cluster core-feature radar chart')
+
+
+def write_cluster_profiles(path: Path, best, profiles, snapshots) -> None:
+    """Write a defendable Chinese explanation document for all discovered regimes."""
+    with path.open('w', encoding='utf-8') as f:
+        f.write('# 聚类市场状态画像（自动生成）\n\n')
+        f.write(f"最佳模型：{best['algorithm']}，K={best['k']}。聚类对象是滚动时间窗口生成的市场快照，不是单只股票。\n\n")
+        f.write('## 解释逻辑\n\n')
+        f.write('- 先用标准化后的市场快照特征完成无监督聚类，再回到原始量纲解释各簇。\n')
+        f.write('- 命名依据包括窗口收益、年化波动、最大回撤、横截面离散度、平均相关、网络密度、行业集中度和科技行业相对收益。\n')
+        f.write('- 因为当前默认数据可由脚本模拟生成，画像应理解为课程展示版结论；接入真实复权价格后需重新运行并复核命名。\n\n')
+        for lab,(name,avg,idxs) in profiles.items():
+            f.write(f"## {name}\n\n")
+            f.write(f"- 核心特征：平均窗口收益 {avg['mean_return']:.2%}，年化市场波动率 {avg['market_volatility']:.2%}，最大回撤 {avg['market_max_drawdown']:.2%}，平均相关 {avg['mean_correlation']:.2f}，网络密度 {avg['network_density']:.2f}，科技相对市场 {avg['technology_minus_market']:.2%}。\n")
+            f.write(f"- 典型时间窗口：{', '.join(snapshots[i].window_id for i in idxs[:10])}。\n")
+            if avg['market_volatility'] > 0.25 or avg['market_max_drawdown'] < -0.12:
+                behavior = '市场共同下跌或快速修复时的高相关、高波动状态，分散化效果下降，风险监控优先级最高。'
+            elif avg['technology_minus_market'] > 0.03:
+                behavior = '科技与通信服务相对占优，市场上涨更多由成长主题和行业分化推动。'
+            elif avg['mean_return'] > 0 and avg['market_volatility'] < 0.17:
+                behavior = '收益为正且波动较低，适合解释为稳态扩张或低波动牛市。'
+            elif avg['mean_return'] < 0:
+                behavior = '收益承压且风险偏高，代表加息、估值压缩或宏观压力阶段。'
+            else:
+                behavior = '收益和风险处于中间状态，通常是防御震荡或状态切换过渡期。'
+            f.write(f"- 典型行为/偏好：{behavior}\n")
+            f.write('- 应用价值：可用于市场状态预警、组合再平衡、行业轮动复盘、投资者教育和前端可视化展示。\n\n')
+        f.write('## 总体应用价值\n\n')
+        f.write('- 用户分层/资产配置：不同风险承受能力的用户可对应不同市场状态下的组合策略。\n')
+        f.write('- 推荐系统：当市场状态切换时，可调整相似资产召回、风险提示和行业主题推荐权重。\n')
+        f.write('- 精准运营：把“危机共振”“科技驱动”“低波动扩张”等标签用于投教内容和市场复盘。\n')
+        f.write('- 内容理解：为财经新闻、行情解释和仪表盘图表提供结构化语义标签。\n')
+
 def write_csv(path, rows, fieldnames):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('w',newline='',encoding='utf-8') as f:
@@ -512,10 +645,11 @@ def main():
     for aname,fn in algos.items():
         for k in range(2,max_k+1):
             labels,cent=fn(data,k); sil=silhouette(data,labels); db=dbi(data,labels,cent); cal=ch(data,labels,cent)
-            metrics.append({'algorithm':aname,'k':k,'silhouette':f'{sil:.6f}','davies_bouldin':f'{db:.6f}','calinski_harabasz':f'{cal:.6f}'})
+            metrics.append({'algorithm':aname,'k':k,'silhouette':f'{sil:.6f}','davies_bouldin':f'{db:.6f}','calinski_harabasz':f'{cal:.6f}','sse_inertia':f'{inertia_score(data, labels, cent):.6f}'})
             fits[(aname,k)]=(labels,cent,sil,db,cal)
     Path('results/metrics').mkdir(parents=True, exist_ok=True)
-    write_csv(Path('results/metrics/clustering_model_selection.csv'), metrics, ['algorithm','k','silhouette','davies_bouldin','calinski_harabasz'])
+    write_csv(Path('results/metrics/clustering_model_selection.csv'), metrics, ['algorithm','k','silhouette','davies_bouldin','calinski_harabasz','sse_inertia'])
+    write_csv(Path('results/metrics.csv'), metrics, ['algorithm','k','silhouette','davies_bouldin','calinski_harabasz','sse_inertia'])
     # Select among interpretable multi-state solutions (minimum K=4) so the
     # project can distinguish crisis, tightening, low-volatility and thematic
     # leadership states instead of collapsing the whole history into only
@@ -531,16 +665,12 @@ def main():
     for a,b,sa,sb in zip(labels,labels[1:],snapshots,snapshots[1:]):
         trans.append({'from_window':sa.window_id,'to_window':sb.window_id,'from_regime':profiles[a][0],'to_regime':profiles[b][0],'changed': int(a!=b)})
     write_csv(Path('results/regime_transition.csv'), trans, ['from_window','to_window','from_regime','to_regime','changed'])
-    with Path('results/regime_profiles.md').open('w',encoding='utf-8') as f:
-        f.write('# 市场状态画像（自动生成）\n\n')
-        f.write(f"最佳模型：{best['algorithm']}，K={best['k']}。聚类对象是滚动时间窗口，不是单只股票。\n\n")
-        for lab,(name,avg,idxs) in profiles.items():
-            f.write(f"## {name}\n\n")
-            f.write(f"- 覆盖窗口数：{len(idxs)}；典型时间：{', '.join(snapshots[i].window_id for i in idxs[:8])}\n")
-            f.write(f"- 收益：平均窗口收益 {avg['mean_return']:.2%}，中位收益 {avg['median_return']:.2%}，横截面收益离散度 {avg['return_dispersion']:.2%}。\n")
-            f.write(f"- 风险：年化市场波动率 {avg['market_volatility']:.2%}，平均最大回撤 {avg['market_max_drawdown']:.2%}，个股波动率离散度 {avg['volatility_dispersion']:.2%}。\n")
-            f.write(f"- 相关性与网络：平均相关 {avg['mean_correlation']:.2f}，网络密度 {avg['network_density']:.2f}，平均度数 {avg['avg_degree']:.1f}，聚类系数 {avg['clustering_coefficient']:.2f}。\n")
-            f.write(f"- 行业结构：行业集中度 {avg['sector_concentration']:.2f}，行业收益差 {avg['sector_return_spread']:.2%}，科技相对市场 {avg['technology_minus_market']:.2%}。\n\n")
+    write_cluster_profiles(Path('results/cluster_profiles.md'), best, profiles, snapshots)
+    write_cluster_profiles(Path('results/regime_profiles.md'), best, profiles, snapshots)
+    profile_rows=[]
+    for lab,(name,avg,idxs) in profiles.items():
+        profile_rows.append({'regime_id':lab,'regime_name':name,'window_count':len(idxs), **{c:f'{avg[c]:.8f}' for c in FEATURE_COLUMNS}})
+    write_csv(Path('results/cluster_profile_summary.csv'), profile_rows, ['regime_id','regime_name','window_count']+FEATURE_COLUMNS)
     # event analysis
     with Path('results/event_change_analysis.md').open('w',encoding='utf-8') as f:
         f.write('# 关键事件附近的结构突变检测\n\n')
@@ -554,10 +684,14 @@ def main():
     fig = Path('results/figures')
     fig.mkdir(parents=True, exist_ok=True)
     scatter_svg(pts, labels, fig/'pca_market_state_scatter.svg', 'PCA market-state scatter')
+    scatter_svg(pts, labels, fig/'pca_cluster_scatter.svg', 'PCA cluster scatter')
     scatter_svg(ts, labels, fig/'tsne_market_state_scatter.svg', 't-SNE-style market-state scatter')
     timeline_svg(snapshots, labels, fig/'regime_timeline.svg')
     transition_svg(labels, fig/'regime_transition_graph.svg')
     bar_compare_svg(profiles, fig/'key_period_structure_comparison.svg')
+    bar_compare_svg(profiles, fig/'cluster_feature_bar.svg')
+    radar_svg(profiles, fig/'cluster_feature_radar.svg')
+    k_metrics_svg(metrics, fig/'k_metrics.svg')
     # latest-window stock network
     tickers=sorted(prices)[:60]; start_i=len(dates)-args.window-1; rets={t:pct_returns(prices[t][start_i:start_i+args.window+1]) for t in tickers}; corr=[[1.0]*len(tickers) for _ in tickers]
     for i,t in enumerate(tickers):
