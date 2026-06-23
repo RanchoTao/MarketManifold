@@ -1,0 +1,37 @@
+{
+  "data_first_return_date": "2021-06-23",
+  "data_last_return_date": "2026-06-22",
+  "first_window_end": "2021-10-28",
+  "last_window_end": "2026-06-22",
+  "trading_day_count": 1254,
+  "rolling_window": 90,
+  "step": 1,
+  "valid_frame_count": 1165,
+  "failed_frame_count": 0,
+  "cache_path": "C:\\Users\\RanchoTao\\Desktop\\MarketManifold\\data\\cache\\daily_full_market_structure.pkl",
+  "used_cache": true,
+  "gif_path": "C:\\Users\\RanchoTao\\Desktop\\MarketManifold\\outputs\\market_structure_daily_full_slow.gif",
+  "mp4_path": "C:\\Users\\RanchoTao\\Desktop\\MarketManifold\\outputs\\market_structure_daily_full_slow.mp4",
+  "preview_path": "C:\\Users\\RanchoTao\\Desktop\\MarketManifold\\outputs\\market_structure_daily_full_slow_preview.png",
+  "mp4_status": "generated",
+  "fps": 8,
+  "unique_frame_count": 1165,
+  "submitted_frame_count_with_holds": 1212,
+  "gif_encoded_image_count": 1165,
+  "intended_duration_seconds": 151.5,
+  "actual_gif_duration_seconds": 151.5,
+  "key_frame_ids": [
+    166,
+    295,
+    1087
+  ],
+  "global_xlim": [
+    -1.4872035950953062,
+    1.5512519713632495
+  ],
+  "global_ylim": [
+    -1.4338719960300348,
+    1.4976502072660087
+  ],
+  "position_smoothing": "none"
+}

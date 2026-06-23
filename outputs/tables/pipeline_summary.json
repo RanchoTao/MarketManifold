@@ -1,0 +1,21 @@
+{
+  "window_count": 117,
+  "ticker_count": 46,
+  "key_snapshot_window_ids": [
+    21,
+    29,
+    109
+  ],
+  "animation": {
+    "gif": "C:\\Users\\RanchoTao\\Desktop\\MarketManifold\\outputs\\animations\\market_structure.gif",
+    "mp4": "",
+    "mp4_status": "ffmpeg not found"
+  },
+  "prediction_models": [
+    "naive_last_train",
+    "LinearRegression",
+    "RandomForestRegressor"
+  ],
+  "report_pdf_status": "compiled",
+  "alignment_last_distance_ratio": 0.9999999999999998
+}

@@ -1,0 +1,47 @@
+project_ticker,source_member,source_ticker,normalized_ticker,sector,matched,reason
+AAPL,data/daily/us/nasdaq stocks/1/aapl.us.txt,AAPL.US,AAPL,Information Technology,True,matched by filename ticker/alias
+MSFT,data/daily/us/nasdaq stocks/2/msft.us.txt,MSFT.US,MSFT,Information Technology,True,matched by filename ticker/alias
+NVDA,data/daily/us/nasdaq stocks/2/nvda.us.txt,NVDA.US,NVDA,Information Technology,True,matched by filename ticker/alias
+AMZN,data/daily/us/nasdaq stocks/1/amzn.us.txt,AMZN.US,AMZN,Consumer Discretionary,True,matched by filename ticker/alias
+GOOGL,data/daily/us/nasdaq stocks/1/googl.us.txt,GOOGL.US,GOOGL,Communication Services,True,matched by filename ticker/alias
+GOOG,data/daily/us/nasdaq stocks/1/goog.us.txt,GOOG.US,GOOG,Communication Services,True,matched by filename ticker/alias
+META,data/daily/us/nasdaq stocks/2/meta.us.txt,META.US,META,Communication Services,True,matched by filename ticker/alias
+TSLA,data/daily/us/nasdaq stocks/3/tsla.us.txt,TSLA.US,TSLA,Consumer Discretionary,True,matched by filename ticker/alias
+AVGO,data/daily/us/nasdaq stocks/1/avgo.us.txt,AVGO.US,AVGO,Information Technology,True,matched by filename ticker/alias
+ORCL,data/daily/us/nyse stocks/2/orcl.us.txt,ORCL.US,ORCL,Information Technology,True,matched by filename ticker/alias
+CRM,data/daily/us/nyse stocks/1/crm.us.txt,CRM.US,CRM,Information Technology,True,matched by filename ticker/alias
+AMD,data/daily/us/nasdaq stocks/1/amd.us.txt,AMD.US,AMD,Information Technology,True,matched by filename ticker/alias
+INTC,data/daily/us/nasdaq stocks/2/intc.us.txt,INTC.US,INTC,Information Technology,True,matched by filename ticker/alias
+CSCO,data/daily/us/nasdaq stocks/1/csco.us.txt,CSCO.US,CSCO,Information Technology,True,matched by filename ticker/alias
+NFLX,data/daily/us/nasdaq stocks/2/nflx.us.txt,NFLX.US,NFLX,Communication Services,True,matched by filename ticker/alias
+JPM,data/daily/us/nyse stocks/1/jpm.us.txt,JPM.US,JPM,Financials,True,matched by filename ticker/alias
+BAC,data/daily/us/nyse stocks/1/bac.us.txt,BAC.US,BAC,Financials,True,matched by filename ticker/alias
+GS,data/daily/us/nyse stocks/1/gs.us.txt,GS.US,GS,Financials,True,matched by filename ticker/alias
+MS,data/daily/us/nyse stocks/2/ms.us.txt,MS.US,MS,Financials,True,matched by filename ticker/alias
+V,data/daily/us/nyse stocks/2/v.us.txt,V.US,V,Financials,True,matched by filename ticker/alias
+MA,data/daily/us/nyse stocks/1/ma.us.txt,MA.US,MA,Financials,True,matched by filename ticker/alias
+BRK.B,data/daily/us/nyse stocks/1/brk-b.us.txt,BRK-B.US,BRK.B,Financials,True,matched by filename ticker/alias
+UNH,data/daily/us/nyse stocks/2/unh.us.txt,UNH.US,UNH,Health Care,True,matched by filename ticker/alias
+JNJ,data/daily/us/nyse stocks/1/jnj.us.txt,JNJ.US,JNJ,Health Care,True,matched by filename ticker/alias
+PFE,data/daily/us/nyse stocks/2/pfe.us.txt,PFE.US,PFE,Health Care,True,matched by filename ticker/alias
+LLY,data/daily/us/nyse stocks/1/lly.us.txt,LLY.US,LLY,Health Care,True,matched by filename ticker/alias
+XOM,data/daily/us/nyse stocks/2/xom.us.txt,XOM.US,XOM,Energy,True,matched by filename ticker/alias
+CVX,data/daily/us/nyse stocks/1/cvx.us.txt,CVX.US,CVX,Energy,True,matched by filename ticker/alias
+PG,data/daily/us/nyse stocks/2/pg.us.txt,PG.US,PG,Consumer Staples,True,matched by filename ticker/alias
+KO,data/daily/us/nyse stocks/1/ko.us.txt,KO.US,KO,Consumer Staples,True,matched by filename ticker/alias
+PEP,data/daily/us/nasdaq stocks/2/pep.us.txt,PEP.US,PEP,Consumer Staples,True,matched by filename ticker/alias
+WMT,data/daily/us/nasdaq stocks/3/wmt.us.txt,WMT.US,WMT,Consumer Staples,True,matched by filename ticker/alias
+COST,data/daily/us/nasdaq stocks/1/cost.us.txt,COST.US,COST,Consumer Staples,True,matched by filename ticker/alias
+HD,data/daily/us/nyse stocks/1/hd.us.txt,HD.US,HD,Consumer Discretionary,True,matched by filename ticker/alias
+MCD,data/daily/us/nyse stocks/2/mcd.us.txt,MCD.US,MCD,Consumer Discretionary,True,matched by filename ticker/alias
+CAT,data/daily/us/nyse stocks/1/cat.us.txt,CAT.US,CAT,Industrials,True,matched by filename ticker/alias
+BA,data/daily/us/nyse stocks/1/ba.us.txt,BA.US,BA,Industrials,True,matched by filename ticker/alias
+GE,data/daily/us/nyse stocks/1/ge.us.txt,GE.US,GE,Industrials,True,matched by filename ticker/alias
+DIS,data/daily/us/nyse stocks/1/dis.us.txt,DIS.US,DIS,Communication Services,True,matched by filename ticker/alias
+NKE,data/daily/us/nyse stocks/2/nke.us.txt,NKE.US,NKE,Consumer Discretionary,True,matched by filename ticker/alias
+T,data/daily/us/nyse stocks/2/t.us.txt,T.US,T,Communication Services,True,matched by filename ticker/alias
+VZ,data/daily/us/nyse stocks/2/vz.us.txt,VZ.US,VZ,Communication Services,True,matched by filename ticker/alias
+NEE,data/daily/us/nyse stocks/2/nee.us.txt,NEE.US,NEE,Utilities,True,matched by filename ticker/alias
+DUK,data/daily/us/nyse stocks/1/duk.us.txt,DUK.US,DUK,Utilities,True,matched by filename ticker/alias
+AMT,data/daily/us/nyse stocks/1/amt.us.txt,AMT.US,AMT,Real Estate,True,matched by filename ticker/alias
+LIN,data/daily/us/nasdaq stocks/2/lin.us.txt,LIN.US,LIN,Materials,True,matched by filename ticker/alias
