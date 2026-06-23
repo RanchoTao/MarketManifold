@@ -9,3 +9,6 @@ __pycache__/
 # 不提交大型原始数据；README 说明文件保留。
 data/raw/*
 !data/raw/README.md
+
+# 本地行情下载缓存，避免重复请求 Yahoo Finance。
+data/cache/
