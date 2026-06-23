@@ -314,3 +314,26 @@ npm run build
 - 当前 GMM 为标准库兜底近似实现；如环境允许，可用 scikit-learn 的 `GaussianMixture`、`KMeans` 和 `AgglomerativeClustering` 替换。
 - 可加入成交量、市值、估值、新闻情绪、宏观变量和社区发现算法，增强解释力。
 - 成员姓名、学号和真实分工仍需人工补充。
+
+## 13. 真实市场数据获取与运行
+
+本仓库支持使用 Yahoo Finance / `yfinance` 下载最近五年的真实日频行情，并清洗为主流程需要的共同价格面板。
+
+```bash
+pip install -r requirements.txt
+python src/fetch_market_data.py
+python src/dynamic_market_regime.py \
+  --prices data/raw/sp500_prices.csv \
+  --start 2021-06-23 \
+  --end 2026-06-23 \
+  --window 60 \
+  --step 10
+```
+
+说明：
+
+- 若 `data/raw/sp500_prices.csv` 存在，主流程会直接使用真实数据文件。
+- 若真实数据文件不存在，旧主流程可能会自动生成可复现模拟数据作为课堂兜底。
+- 正式报告和前端展示应使用真实数据生成的 `data/processed/market_snapshots.csv`、`results/regime_assignments.csv`、`results/pca_market_coordinates.csv` 和 `results/metrics.csv`。
+- 可通过 `results/data_download_summary.json` 判断真实数据是否成功：重点检查 `source` 是否为 `Yahoo Finance via yfinance`、`requested_start/requested_end` 是否为目标日期、`kept_ticker_count` 是否不少于 80、`final_trading_day_count` 和 `final_row_count` 是否为正数，以及 `failed_tickers` 和 `dropped_ticker_count` 是否可解释。
+- 详细数据来源、清洗规则和限制见 `docs/data_source.md`。
